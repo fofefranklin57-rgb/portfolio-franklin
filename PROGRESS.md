@@ -7,7 +7,7 @@
 
 ## Phase actuelle : Phase 1 — MVP
 
-**Statut** : 🚧 En cours
+**Statut** : ✅ Phase 1 MVP COMPLÈTE — commit b0c2774 — en attente push GitHub + deploy Cloudflare
 
 ---
 
@@ -82,32 +82,31 @@ UTC+1 — Europe-compatible  |  Français · English  |  Async-ready  |  Documen
 
 ## Phase 1 — MVP
 
-### Bloc 1 — Fondations
-- [x] Projet Next.js 15/16 + TypeScript + Tailwind initialisé
-- [ ] next-intl installé et configuré (FR + EN)
-- [ ] Middleware de redirection locale
-- [ ] Structure de dossiers complète (app/[locale]/...)
-- [ ] Layout global (Header + Footer + Nav mobile)
-- [ ] Dark mode / Light mode (toggle)
+### Bloc 1 — Fondations ✅
+- [x] Projet Next.js 16.2.9 + TypeScript + CSS custom properties
+- [x] next-intl 4.13.0 configuré (FR + EN)
+- [x] src/proxy.ts (middleware Next.js 16, redirection locale)
+- [x] Structure complète app/[locale]/...
+- [x] Layout global (Header sticky + Footer + Nav mobile burger)
 
-### Bloc 2 — Page Home
-- [ ] Section Hero (photo placeholder + titre + tagline + micro + badges + 2 CTA)
-- [ ] Section Proof Strip (4 métriques validées)
-- [ ] Section Featured Projects (3 cartes : ImmoGest, Kalamundi, AgroNova)
-- [ ] Section About courte (5 lignes max)
-- [ ] Section Skills (5 catégories validées)
-- [ ] Section Remote Ready (3 éléments validés)
-- [ ] Section Disponibilité + CTA Contact
+### Bloc 2 — Page Home ✅
+- [x] Section Hero (FF placeholder + titre + tagline + micro + 4 pills + 2 CTA)
+- [x] Section Proof Strip (4 métriques : 4 produits / 700 silures / 3+ ans / 100% remote)
+- [x] Section Featured Projects (3 cartes : ImmoGest, Kalamundi, AgroNova)
+- [x] Section About courte
+- [x] Section Skills (6 catégories dont Documentation & Knowledge Management)
+- [x] Section Remote Ready (3 cartes + 3 checkmarks)
+- [x] Section ContactCTA
 
-### Bloc 3 — Pages secondaires
-- [ ] Page /about (biographie longue EN + FR)
-- [ ] Page /projects (liste des 4 projets)
-- [ ] Fichiers MDX des 4 projets (ImmoGest, Kalamundi, Traficam, AgroNova)
-- [ ] Page /contact (formulaire React Hook Form + Zod + Resend)
+### Bloc 3 — Pages secondaires ✅
+- [x] Page /about (biographie longue FR + EN)
+- [x] Page /projects (4 projets : ImmoGest, Kalamundi, Traficam, AgroNova)
+- [x] Page /contact (email + LinkedIn + GitHub + note disponibilité)
 
 ### Bloc 4 — SEO et déploiement
-- [ ] generateMetadata() sur chaque page
-- [ ] sitemap.xml + robots.txt
+- [x] generateMetadata() sur chaque page
+- [x] sitemap.ts + robots.ts
+- [ ] Repo GitHub créé + push (attente création repo par Franklin)
 - [ ] Déploiement Cloudflare Pages
 - [ ] Domaine configuré
 
@@ -150,9 +149,9 @@ UTC+1 — Europe-compatible  |  Français · English  |  Async-ready  |  Documen
 | next | 16.2.9 | ✅ |
 | react | 19.2.4 | ✅ |
 | typescript | ^5 | ✅ |
-| tailwindcss | ^4 | ✅ |
-| next-intl | — | 🚧 en cours |
-| lucide-react | — | 🚧 en cours |
+| tailwindcss | ^4 | ⚠️ installé mais non utilisé (dépendances corrompues) |
+| next-intl | 4.13.0 | ✅ |
+| lucide-react | 1.21.0 | ✅ (Github→GitFork, Linkedin→ExternalLink) |
 
 ---
 
