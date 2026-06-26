@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "hero": {
+    "availability": "Open to international remote opportunities",
+    "name": "Franklin Fofe Nodem",
+    "location": "Cameroon, UTC+1",
+    "title1": "Product Builder",
+    "title2": "Software Developer",
+    "tagline": "I build <strong>digital products that solve real-world problems.</strong> From SaaS platforms to real businesses, I turn ideas into working solutions.",
+    "micro1": "Design · Build · Document · Ship",
+    "micro2": "Software and AI are my tools. Real impact is the goal.",
+    "sig_tz": "UTC+1 — Europe-compatible",
+    "sig_lang": "Français · English",
+    "sig_async": "Async-ready",
+    "sig_doc": "Documentation-first",
+    "cta_primary": "Explore My Work",
+    "cta_secondary": "Download Resume",
+    "photo_alt": "Photo of Franklin Fofe Nodem"
+  },
+  "proof": {
+    "products_num": "4",
+    "products_label": "Products Built",
+    "catfish_num": "700",
+    "catfish_label": "Catfish / Cycle",
+    "years_num": "3+",
+    "years_label": "Years Building",
+    "remote_num": "100%",
+    "remote_label": "Remote Ready"
+  },
+  "projects": {
+    "section_title": "Selected Work",
+    "section_sub": "Products in production, with real users.",
+    "cta": "See all projects",
+    "live": "Live",
+    "beta": "Beta",
+    "dev": "In development"
+  },
+  "about_snippet": {
+    "intro": "I'm Franklin — a lawyer-turned-builder based in Cameroon.",
+    "body": "I've spent the last three years building software products that solve real problems for real people. ImmoGest manages properties for real estate agencies across francophone Africa. Kalamundi connects authors and readers. AgroNova produces 700 catfish per cycle — and counting.",
+    "cta": "More about me"
+  },
+  "remote": {
+    "section_title": "Remote-ready by design",
+    "async": "Comfortable working asynchronously",
+    "doc": "Documentation-first mindset",
+    "comm": "Structured communication",
+    "tz_title": "Timezone",
+    "tz_val": "UTC+1 — Central Africa",
+    "tz_note": "Full overlap with European business hours",
+    "lang_title": "Languages",
+    "lang_val": "French (native) · English (professional)",
+    "tools_title": "Tools",
+    "tools_val": "GitHub · Async communication · Documentation"
+  },
+  "contact_cta": {
+    "title": "Let's work together",
+    "body": "I'm currently available for remote missions, collaborations, and international employment opportunities.",
+    "btn": "Get in touch"
+  },
+  "footer": {
+    "made": "Designed and built by Franklin Fofe Nodem",
+    "rights": "All rights reserved"
+  }
+}

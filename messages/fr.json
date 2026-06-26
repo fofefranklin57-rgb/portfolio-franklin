@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "work": "Projets",
+    "about": "À propos",
+    "resume": "CV",
+    "contact": "Contact"
+  },
+  "hero": {
+    "availability": "Disponible pour des opportunités internationales en télétravail",
+    "name": "Franklin Fofe Nodem",
+    "location": "Cameroun, UTC+1",
+    "title1": "Product Builder",
+    "title2": "Software Developer",
+    "tagline": "Je construis des <strong>produits numériques qui résolvent de vrais problèmes.</strong> Des plateformes SaaS aux vraies entreprises, je transforme les idées en solutions fonctionnelles.",
+    "micro1": "Concevoir · Construire · Documenter · Livrer",
+    "micro2": "Le logiciel et l'IA sont mes outils. L'impact réel est l'objectif.",
+    "sig_tz": "UTC+1 — Compatible Europe",
+    "sig_lang": "Français · English",
+    "sig_async": "Async-ready",
+    "sig_doc": "Documentation-first",
+    "cta_primary": "Explorer mon travail",
+    "cta_secondary": "Télécharger le CV",
+    "photo_alt": "Photo de Franklin Fofe Nodem"
+  },
+  "proof": {
+    "products_num": "4",
+    "products_label": "Produits construits",
+    "catfish_num": "700",
+    "catfish_label": "Silures / cycle",
+    "years_num": "3+",
+    "years_label": "Années à construire",
+    "remote_num": "100%",
+    "remote_label": "Télétravail ready"
+  },
+  "projects": {
+    "section_title": "Projets sélectionnés",
+    "section_sub": "Des produits en production, avec de vrais utilisateurs.",
+    "cta": "Voir tous les projets",
+    "live": "En ligne",
+    "beta": "Bêta",
+    "dev": "En développement"
+  },
+  "about_snippet": {
+    "intro": "Je suis Franklin — juriste devenu builder, basé au Cameroun.",
+    "body": "J'ai passé les trois dernières années à construire des produits logiciels qui résolvent de vrais problèmes pour de vraies personnes. ImmoGest gère des propriétés pour des agences immobilières d'Afrique francophone. Kalamundi connecte auteurs et lecteurs. AgroNova produit 700 silures par cycle.",
+    "cta": "En savoir plus"
+  },
+  "remote": {
+    "section_title": "Prêt pour le télétravail international",
+    "async": "À l'aise en mode asynchrone",
+    "doc": "Documentation avant tout",
+    "comm": "Communication structurée",
+    "tz_title": "Fuseau horaire",
+    "tz_val": "UTC+1 — Afrique centrale",
+    "tz_note": "Chevauchement complet avec les horaires européens",
+    "lang_title": "Langues",
+    "lang_val": "Français (natif) · Anglais (professionnel)",
+    "tools_title": "Outils",
+    "tools_val": "GitHub · Communication asynchrone · Documentation"
+  },
+  "contact_cta": {
+    "title": "Travaillons ensemble",
+    "body": "Je suis actuellement disponible pour des missions à distance, des collaborations et des opportunités d'emploi international.",
+    "btn": "Me contacter"
+  },
+  "footer": {
+    "made": "Conçu et construit par Franklin Fofe Nodem",
+    "rights": "Tous droits réservés"
+  }
+}
