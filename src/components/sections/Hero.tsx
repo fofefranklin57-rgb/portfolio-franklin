@@ -30,7 +30,7 @@ export default function Hero() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 148px',
+            gridTemplateColumns: '1fr 175px',
             gap: '2.5rem',
             alignItems: 'start',
           }}
@@ -146,10 +146,10 @@ export default function Hero() {
               <img
                 src="/photo-franklin.jpg"
                 alt={t('photo_alt')}
-                width={120}
-                height={120}
+                width={150}
+                height={150}
                 style={{
-                  width: '120px', height: '120px', borderRadius: '50%',
+                  width: '150px', height: '150px', borderRadius: '50%',
                   objectFit: 'cover', objectPosition: 'center top',
                   border: '2px solid var(--border)',
                   display: 'block',
