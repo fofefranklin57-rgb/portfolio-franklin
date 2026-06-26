@@ -1,6 +1,6 @@
 {
   "nav": {
-    "work": "Work",
+    "work": "Projects",
     "about": "About",
     "resume": "Resume",
     "contact": "Contact"
@@ -11,11 +11,11 @@
     "location": "Cameroon, UTC+1",
     "title1": "Product Builder",
     "title2": "Software Developer",
-    "tagline": "I build <strong>digital products that solve real-world problems.</strong> From SaaS platforms to entrepreneurial ventures, I turn ideas into working solutions.",
+    "tagline": "I build <strong>digital products that solve real-world problems</strong> — from SaaS platforms to entrepreneurial ventures.",
     "micro1": "Design · Build · Document · Ship",
     "micro2": "Software and AI are my tools. Tangible results are the only measure.",
     "sig_tz": "UTC+1 — Europe-compatible",
-    "sig_lang": "Français · English",
+    "sig_lang": "French · English",
     "sig_async": "Async-ready",
     "sig_doc": "Documentation-first",
     "cta_primary": "Explore My Work",
@@ -24,7 +24,7 @@
   },
   "proof": {
     "products_num": "4",
-    "products_label": "Products Built",
+    "products_label": "Products Shipped",
     "catfish_num": "700",
     "catfish_label": "Catfish Produced / Cycle",
     "years_num": "3+",

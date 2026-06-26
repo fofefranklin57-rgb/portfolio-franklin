@@ -11,11 +11,11 @@
     "location": "Cameroun, UTC+1",
     "title1": "Product Builder",
     "title2": "Software Developer",
-    "tagline": "Je construis des <strong>produits numériques qui résolvent de vrais problèmes.</strong> Des plateformes SaaS aux vraies entreprises, je transforme les idées en solutions fonctionnelles.",
+    "tagline": "Je construis des <strong>produits numériques qui résolvent de vrais problèmes</strong> — des plateformes SaaS aux projets entrepreneuriaux.",
     "micro1": "Concevoir · Construire · Documenter · Livrer",
     "micro2": "Le logiciel et l'IA sont mes outils. Créer un impact concret, c'est le seul objectif qui compte.",
     "sig_tz": "UTC+1 — Compatible Europe",
-    "sig_lang": "Français · English",
+    "sig_lang": "Français · Anglais",
     "sig_async": "Async-ready",
     "sig_doc": "Documentation-first",
     "cta_primary": "Explorer mon travail",
@@ -24,13 +24,13 @@
   },
   "proof": {
     "products_num": "4",
-    "products_label": "Produits construits",
+    "products_label": "Produits livrés",
     "catfish_num": "700",
     "catfish_label": "Silures produits / cycle",
     "years_num": "3+",
     "years_label": "Années à construire",
     "remote_num": "100%",
-    "remote_label": "Télétravail ready"
+    "remote_label": "Remote-ready"
   },
   "projects": {
     "section_title": "Projets sélectionnés",
