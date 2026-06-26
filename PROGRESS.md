@@ -106,9 +106,9 @@ UTC+1 — Europe-compatible  |  Français · English  |  Async-ready  |  Documen
 ### Bloc 4 — SEO et déploiement
 - [x] generateMetadata() sur chaque page
 - [x] sitemap.ts + robots.ts
-- [ ] Repo GitHub créé + push (attente création repo par Franklin)
-- [ ] Déploiement Cloudflare Pages
-- [ ] Domaine configuré
+- [x] Repo GitHub créé + push : https://github.com/fofefranklin57-rgb/portfolio-franklin
+- [x] Déploiement Cloudflare Pages : https://portfolio-franklin.pages.dev (direct upload wrangler, 124 fichiers)
+- [ ] Domaine personnalisé configuré
 
 ---
 
