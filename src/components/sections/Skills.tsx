@@ -63,8 +63,8 @@ const categories: Category[] = [
 ];
 
 const levelColors: Record<string, { bg: string; color: string; border: string }> = {
-  advanced: { bg: '#ecfdf5', color: '#059669', border: '#a7f3d0' },
-  intermediate: { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe' },
+  advanced: { bg: 'var(--badge-green-bg)', color: 'var(--badge-green-color)', border: 'var(--badge-green-border)' },
+  intermediate: { bg: 'var(--badge-blue-bg)', color: 'var(--badge-blue-color)', border: 'var(--badge-blue-border)' },
 };
 
 export default function Skills() {

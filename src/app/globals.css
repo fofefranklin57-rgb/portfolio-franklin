@@ -1,3 +1,4 @@
+/* ── Light mode (default) ── */
 :root {
   --bg: #ffffff;
   --bg2: #f8fafc;
@@ -13,6 +14,69 @@
   --accent-dim: #1d4ed8;
   --green: #059669;
   --radius: 8px;
+
+  /* Header */
+  --header-bg: rgba(255, 255, 255, 0.95);
+
+  /* Badges status */
+  --badge-green-bg: #ecfdf5;
+  --badge-green-color: #059669;
+  --badge-green-border: #a7f3d0;
+
+  --badge-blue-bg: #eff6ff;
+  --badge-blue-color: #2563eb;
+  --badge-blue-border: #bfdbfe;
+
+  --badge-amber-bg: #fffbeb;
+  --badge-amber-color: #d97706;
+  --badge-amber-border: #fde68a;
+
+  /* Skills / pills */
+  --pill-accent-bg: #eff6ff;
+  --pill-accent-color: #2563eb;
+  --pill-accent-border: #bfdbfe;
+  --pill-default-bg: #f8fafc;
+  --pill-default-color: #475569;
+  --pill-default-border: #e2e8f0;
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --bg2: #0f172a;
+  --bg3: #111827;
+  --surface: #161b27;
+  --border: #1e293b;
+  --border2: #253347;
+  --text1: #f8fafc;
+  --text2: #cbd5e1;
+  --text3: #64748b;
+  --text4: #334155;
+  --accent: #3b82f6;
+  --accent-dim: #2563eb;
+  --green: #10b981;
+  --radius: 8px;
+
+  --header-bg: rgba(10, 10, 10, 0.95);
+
+  --badge-green-bg: rgba(16, 185, 129, 0.12);
+  --badge-green-color: #10b981;
+  --badge-green-border: rgba(16, 185, 129, 0.25);
+
+  --badge-blue-bg: rgba(59, 130, 246, 0.12);
+  --badge-blue-color: #60a5fa;
+  --badge-blue-border: rgba(59, 130, 246, 0.25);
+
+  --badge-amber-bg: rgba(245, 158, 11, 0.12);
+  --badge-amber-color: #fbbf24;
+  --badge-amber-border: rgba(245, 158, 11, 0.25);
+
+  --pill-accent-bg: rgba(59, 130, 246, 0.15);
+  --pill-accent-color: #93c5fd;
+  --pill-accent-border: rgba(59, 130, 246, 0.3);
+  --pill-default-bg: rgba(255, 255, 255, 0.04);
+  --pill-default-color: #64748b;
+  --pill-default-border: #1e293b;
 }
 
 * {
@@ -29,6 +93,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {

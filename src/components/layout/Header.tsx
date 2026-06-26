@@ -3,14 +3,36 @@
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 export default function Header() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [dark, setDark] = useState(false);
+
+  // Initialiser depuis localStorage au montage
+  useEffect(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      setDark(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const next = !dark;
+    setDark(next);
+    if (next) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
   const otherLocale = locale === 'fr' ? 'en' : 'fr';
   const switchPath = pathname.replace(`/${locale}`, `/${otherLocale}`);
@@ -27,7 +49,7 @@ export default function Header() {
   return (
     <header
       style={{
-        background: 'rgba(255,255,255,0.95)',
+        background: 'var(--header-bg)',
         borderBottom: '0.5px solid var(--border)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
@@ -62,29 +84,17 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav
-          aria-label="Navigation principale"
-          style={{ display: 'flex', alignItems: 'center', gap: '28px' }}
-          className="hidden md:flex"
-        >
+        <nav aria-label="Navigation principale" style={{ display: 'flex', alignItems: 'center', gap: '28px' }}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               style={{
                 fontSize: '13px',
-                color: isActive(link.href) ? 'var(--text2)' : 'var(--text3)',
+                color: isActive(link.href) ? 'var(--text1)' : 'var(--text3)',
                 textDecoration: 'none',
-                transition: 'color 0.15s',
+                fontWeight: isActive(link.href) ? 500 : 400,
               }}
-              onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.color = 'var(--text2)')
-              }
-              onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.color = isActive(link.href)
-                  ? 'var(--text2)'
-                  : 'var(--text3)')
-              }
             >
               {link.label}
             </Link>
@@ -92,17 +102,37 @@ export default function Header() {
         </nav>
 
         {/* Right side */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            aria-label={dark ? 'Passer en mode clair' : 'Passer en mode sombre'}
+            style={{
+              background: 'var(--bg2)',
+              border: '0.5px solid var(--border)',
+              borderRadius: '6px',
+              padding: '6px',
+              cursor: 'pointer',
+              color: 'var(--text3)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {dark ? <Sun size={14} /> : <Moon size={14} />}
+          </button>
+
+          {/* Lang toggle */}
           <Link
             href={switchPath}
             aria-label={`Switch to ${otherLocale === 'fr' ? 'French' : 'English'}`}
             style={{
               fontSize: '11px',
               color: 'var(--text3)',
-              background: 'var(--bg3)',
+              background: 'var(--bg2)',
               border: '0.5px solid var(--border)',
               padding: '4px 10px',
-              borderRadius: '4px',
+              borderRadius: '6px',
               textDecoration: 'none',
               textTransform: 'uppercase',
               letterSpacing: '0.06em',
@@ -121,10 +151,10 @@ export default function Header() {
               color: 'var(--text3)',
               cursor: 'pointer',
               padding: '4px',
-              display: 'flex',
+              display: 'none',
               alignItems: 'center',
             }}
-            className="md:hidden"
+            className="mobile-burger"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -143,7 +173,6 @@ export default function Header() {
             flexDirection: 'column',
             gap: '0',
           }}
-          className="md:hidden"
         >
           {navLinks.map((link) => (
             <Link

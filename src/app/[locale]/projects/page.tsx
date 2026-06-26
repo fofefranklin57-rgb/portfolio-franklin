@@ -61,9 +61,9 @@ const projects = [
 ];
 
 const statusColors: Record<string, { bg: string; color: string; border: string; label: string }> = {
-  live: { bg: '#ecfdf5', color: '#059669', border: '#a7f3d0', label: 'Live' },
-  beta: { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe', label: 'Beta' },
-  dev: { bg: '#fffbeb', color: '#d97706', border: '#fde68a', label: 'In development' },
+  live: { bg: 'var(--badge-green-bg)', color: 'var(--badge-green-color)', border: 'var(--badge-green-border)', label: 'Live' },
+  beta: { bg: 'var(--badge-blue-bg)', color: 'var(--badge-blue-color)', border: 'var(--badge-blue-border)', label: 'Beta' },
+  dev: { bg: 'var(--badge-amber-bg)', color: 'var(--badge-amber-color)', border: 'var(--badge-amber-border)', label: 'In development' },
 };
 
 export default async function ProjectsPage({

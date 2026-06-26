@@ -52,9 +52,9 @@ const projects: Project[] = [
 ];
 
 const statusColors: Record<string, { bg: string; color: string; border: string }> = {
-  live: { bg: '#ecfdf5', color: '#059669', border: '#a7f3d0' },
-  beta: { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe' },
-  dev: { bg: '#fffbeb', color: '#d97706', border: '#fde68a' },
+  live: { bg: 'var(--badge-green-bg)', color: 'var(--badge-green-color)', border: 'var(--badge-green-border)' },
+  beta: { bg: 'var(--badge-blue-bg)', color: 'var(--badge-blue-color)', border: 'var(--badge-blue-border)' },
+  dev: { bg: 'var(--badge-amber-bg)', color: 'var(--badge-amber-color)', border: 'var(--badge-amber-border)' },
 };
 
 export default function FeaturedProjects() {
