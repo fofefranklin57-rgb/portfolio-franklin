@@ -51,10 +51,10 @@ const projects: Project[] = [
   },
 ];
 
-const statusColors: Record<string, { bg: string; color: string }> = {
-  live: { bg: '#0a2010', color: '#10b981' },
-  beta: { bg: '#0c1a35', color: '#60a5fa' },
-  dev: { bg: '#1a1000', color: '#f59e0b' },
+const statusColors: Record<string, { bg: string; color: string; border: string }> = {
+  live: { bg: '#ecfdf5', color: '#059669', border: '#a7f3d0' },
+  beta: { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe' },
+  dev: { bg: '#fffbeb', color: '#d97706', border: '#fde68a' },
 };
 
 export default function FeaturedProjects() {
@@ -107,7 +107,7 @@ export default function FeaturedProjects() {
                       <span style={{
                         fontSize: '10px', padding: '3px 8px', borderRadius: '20px',
                         background: colors.bg, color: colors.color,
-                        border: `0.5px solid ${colors.color}33`,
+                        border: `0.5px solid ${colors.border}`,
                         textTransform: 'uppercase', letterSpacing: '0.06em',
                       }}>
                         {statusLabel}

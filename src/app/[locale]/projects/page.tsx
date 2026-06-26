@@ -60,10 +60,10 @@ const projects = [
   },
 ];
 
-const statusColors: Record<string, { bg: string; color: string; label: string }> = {
-  live: { bg: '#0a2010', color: '#10b981', label: 'Live' },
-  beta: { bg: '#0c1a35', color: '#60a5fa', label: 'Beta' },
-  dev: { bg: '#1a1000', color: '#f59e0b', label: 'In development' },
+const statusColors: Record<string, { bg: string; color: string; border: string; label: string }> = {
+  live: { bg: '#ecfdf5', color: '#059669', border: '#a7f3d0', label: 'Live' },
+  beta: { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe', label: 'Beta' },
+  dev: { bg: '#fffbeb', color: '#d97706', border: '#fde68a', label: 'In development' },
 };
 
 export default async function ProjectsPage({
@@ -113,7 +113,7 @@ export default async function ProjectsPage({
                   <span style={{
                     fontSize: '10px', padding: '3px 10px', borderRadius: '20px',
                     background: s.bg, color: s.color,
-                    border: `0.5px solid ${s.color}33`,
+                    border: `0.5px solid ${s.border}`,
                     textTransform: 'uppercase', letterSpacing: '0.06em',
                   }}>
                     {s.label}

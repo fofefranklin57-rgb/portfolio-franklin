@@ -62,9 +62,9 @@ const categories: Category[] = [
   },
 ];
 
-const levelColors: Record<string, { bg: string; color: string }> = {
-  advanced: { bg: '#0a2010', color: '#10b981' },
-  intermediate: { bg: '#0c1a35', color: '#60a5fa' },
+const levelColors: Record<string, { bg: string; color: string; border: string }> = {
+  advanced: { bg: '#ecfdf5', color: '#059669', border: '#a7f3d0' },
+  intermediate: { bg: '#eff6ff', color: '#2563eb', border: '#bfdbfe' },
 };
 
 export default function Skills() {
@@ -117,7 +117,7 @@ export default function Skills() {
                       style={{
                         fontSize: '12px', padding: '4px 10px', borderRadius: '20px',
                         background: c.bg, color: c.color,
-                        border: `0.5px solid ${c.color}33`,
+                        border: `0.5px solid ${c.border}`,
                       }}
                     >
                       {skill.name}

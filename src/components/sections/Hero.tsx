@@ -96,9 +96,9 @@ export default function Hero() {
                   key={sig.label}
                   style={{
                     fontSize: '11px',
-                    background: sig.accent ? '#0c1a35' : '#0a0f1a',
-                    border: `0.5px solid ${sig.accent ? '#1d3a6e' : 'var(--border)'}`,
-                    color: sig.accent ? '#60a5fa' : 'var(--text3)',
+                    background: sig.accent ? 'var(--accent)' : 'var(--bg2)',
+                    border: `0.5px solid ${sig.accent ? 'var(--accent)' : 'var(--border)'}`,
+                    color: sig.accent ? '#fff' : 'var(--text3)',
                     padding: '4px 11px', borderRadius: '20px',
                     display: 'flex', alignItems: 'center', gap: '5px',
                   }}
