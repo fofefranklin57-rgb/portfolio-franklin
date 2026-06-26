@@ -140,22 +140,21 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── Photo column — swap-ready placeholder ── */}
+          {/* ── Photo column ── */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', paddingTop: '8px' }}>
             <div style={{ position: 'relative' }}>
-              <div
-                role="img"
-                aria-label={t('photo_alt')}
+              <img
+                src="/photo-franklin.jpg"
+                alt={t('photo_alt')}
+                width={120}
+                height={120}
                 style={{
                   width: '120px', height: '120px', borderRadius: '50%',
-                  background: 'var(--bg2)', border: '1.5px solid var(--border)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '28px', fontWeight: 500, color: 'var(--border2)',
-                  letterSpacing: '0.05em', userSelect: 'none',
+                  objectFit: 'cover', objectPosition: 'center top',
+                  border: '2px solid var(--border)',
+                  display: 'block',
                 }}
-              >
-                FF
-              </div>
+              />
               {/* Online availability dot */}
               <div
                 aria-hidden="true"
