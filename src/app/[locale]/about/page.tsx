@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { useTranslations, useLocale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -9,8 +9,13 @@ export const metadata: Metadata = {
     'Franklin Fofe Nodem — lawyer-turned-builder based in Cameroon. Product Builder & Software Developer.',
 };
 
-export default function AboutPage() {
-  const locale = useLocale();
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 1.5rem' }}>
@@ -52,8 +57,8 @@ export default function AboutPage() {
 
           <p style={{ fontSize: '15px', color: 'var(--text2)', lineHeight: 1.8, margin: 0 }}>
             I'm based in Cameroon (UTC+1), fully bilingual in French and English, and I work
-            asynchronously with teams across time zones. I'm currently open to my first international
-            remote opportunity — full-time, freelance, or consulting.
+            asynchronously with teams across time zones. Open to international remote opportunities
+            — full-time, freelance, or consulting.
           </p>
         </div>
 

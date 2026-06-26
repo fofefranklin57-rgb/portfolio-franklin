@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { useLocale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 
@@ -66,8 +66,13 @@ const statusColors: Record<string, { bg: string; color: string; label: string }>
   dev: { bg: '#1a1000', color: '#f59e0b', label: 'In development' },
 };
 
-export default function ProjectsPage() {
-  const locale = useLocale();
+export default async function ProjectsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 1.5rem' }}>

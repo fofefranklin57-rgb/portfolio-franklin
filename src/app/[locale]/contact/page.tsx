@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import { Mail, GitFork, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -6,7 +7,14 @@ export const metadata: Metadata = {
   description: 'Get in touch with Franklin Fofe Nodem — available for remote opportunities.',
 };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 1.5rem' }}>
       <div style={{ maxWidth: '560px' }}>
