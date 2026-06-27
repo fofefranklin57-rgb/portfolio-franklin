@@ -9,6 +9,7 @@ type Project = {
   name: string;
   description: LocalizedString;
   status: 'live' | 'beta' | 'dev';
+  role: LocalizedString;
   stack: string[];
   url?: string;
   year: number;
@@ -19,11 +20,12 @@ const projects: Project[] = [
     slug: 'immogest',
     name: 'ImmoGest',
     description: {
-      fr: "Plateforme SaaS de gestion immobiliere pour les agences d'Afrique francophone. Locataires, paiements, baux, documents — tout en un.",
-      en: "SaaS property management platform for francophone Africa agencies. Tenants, payments, leases, documents — all in one.",
+      fr: "Aide les agences immobilières d'Afrique francophone à gérer locataires, paiements, baux et documents depuis une seule plateforme.",
+      en: "Helping real estate agencies across francophone Africa manage tenants, payments, leases and documents from one platform.",
     },
     status: 'live',
-    stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase', 'PostgreSQL'],
+    role: { fr: 'Fondateur · Product Builder', en: 'Founder · Product Builder' },
+    stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase'],
     url: 'https://immogest-34w.pages.dev',
     year: 2024,
   },
@@ -31,22 +33,24 @@ const projects: Project[] = [
     slug: 'kalamundi',
     name: 'Kalamundi',
     description: {
-      fr: "Plateforme de publication et de lecture connectant auteurs et lecteurs africains. Studio de creation de contenu integre.",
-      en: "Publishing and reading platform connecting African authors and readers. Integrated content creation studio.",
+      fr: "Aide les auteurs africains à publier, distribuer et valoriser leur travail à travers une plateforme numérique moderne.",
+      en: "Helping African authors publish, distribute and showcase their work through a modern digital platform.",
     },
     status: 'live',
-    stack: ['Flutter', 'Next.js', 'Cloudflare', 'Supabase'],
+    role: { fr: 'Fondateur · Product Builder', en: 'Founder · Product Builder' },
+    stack: ['Flutter', 'Next.js', 'Supabase'],
     year: 2023,
   },
   {
     slug: 'agronova',
     name: 'AgroNova Farms',
     description: {
-      fr: "Ferme piscicole — production passee de 300 a 700 silures par cycle. Gestion de la production, suivi des stocks, documentation des cycles.",
-      en: "Fish farm — production scaled from 300 to 700 catfish per cycle. Production management, inventory tracking, cycle documentation.",
+      fr: "A lancé et développé une exploitation piscicole de 300 à 700 silures par cycle en optimisant les processus de production.",
+      en: "Built and scaled a fish farming operation from 300 to 700 catfish per production cycle while improving operational processes.",
     },
     status: 'live',
-    stack: ['Agriculture', 'Product Management', 'Documentation'],
+    role: { fr: 'Fondateur · Opérateur', en: 'Founder · Operator' },
+    stack: ['Agriculture', 'Process Design', 'Documentation'],
     year: 2022,
   },
 ];
@@ -60,6 +64,7 @@ const statusColors: Record<string, { bg: string; color: string; border: string }
 export default function FeaturedProjects() {
   const t = useTranslations('projects');
   const locale = useLocale();
+  const l = locale as 'fr' | 'en';
 
   return (
     <section
@@ -85,7 +90,8 @@ export default function FeaturedProjects() {
           gap: '1rem', marginBottom: '2rem',
         }}>
           {projects.map((project) => {
-            const desc = project.description[locale as 'fr' | 'en'] ?? project.description.en;
+            const desc = project.description[l];
+            const role = project.role[l];
             const statusLabel = t(project.status);
             const colors = statusColors[project.status];
 
@@ -96,9 +102,10 @@ export default function FeaturedProjects() {
                     background: 'var(--bg2)', border: '0.5px solid var(--border)',
                     borderRadius: '12px', padding: '1.5rem',
                     height: '100%', display: 'flex', flexDirection: 'column',
-                    gap: '12px', cursor: 'pointer',
+                    gap: '10px', cursor: 'pointer',
                   }}
                 >
+                  {/* Top row: name + status + year */}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                     <h3 style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text1)', margin: 0 }}>
                       {project.name}
@@ -118,12 +125,19 @@ export default function FeaturedProjects() {
                     </div>
                   </div>
 
+                  {/* Role */}
+                  <p style={{ fontSize: '11px', color: 'var(--text4)', margin: 0, letterSpacing: '0.04em' }}>
+                    {role} · {project.year}
+                  </p>
+
+                  {/* Description — impact first */}
                   <p style={{ fontSize: '13px', color: 'var(--text3)', lineHeight: 1.65, margin: 0, flex: 1 }}>
                     {desc}
                   </p>
 
+                  {/* Stack — max 3 */}
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                    {project.stack.map((tech) => (
+                    {project.stack.slice(0, 3).map((tech) => (
                       <span key={tech} style={{
                         fontSize: '10px', background: 'var(--bg3)',
                         border: '0.5px solid var(--border)', color: 'var(--text4)',

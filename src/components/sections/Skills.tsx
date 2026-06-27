@@ -34,7 +34,7 @@ const categories: Category[] = [
     ],
   },
   {
-    title: 'AI Augmented',
+    title: 'AI-Assisted Development',
     skills: [
       { name: 'Claude (Anthropic)', level: 'advanced' },
       { name: 'Prompt Engineering', level: 'advanced' },
@@ -52,7 +52,7 @@ const categories: Category[] = [
     ],
   },
   {
-    title: 'Also done',
+    title: 'Additional Expertise',
     skills: [
       { name: 'Flutter', level: 'intermediate' },
       { name: 'Legal (Cameroon)', level: 'advanced' },

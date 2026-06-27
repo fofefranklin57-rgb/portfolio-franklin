@@ -56,7 +56,10 @@
     "lang_title": "Languages",
     "lang_val": "French (native) · English (professional)",
     "tools_title": "Tools",
-    "tools_val": "GitHub · Async communication · Documentation"
+    "tools_val": "GitHub · Async communication · Documentation",
+    "avail_title": "Availability",
+    "avail_val": "Available immediately",
+    "avail_note": "Full-time remote · Freelance · Consulting · Collaborations"
   },
   "contact_cta": {
     "title": "Let's work together",

@@ -1,12 +1,13 @@
 import { useTranslations } from 'next-intl';
-import { CheckCircle, Clock, Languages, GitFork } from 'lucide-react';
+import { CheckCircle, Clock, Languages, GitFork, CalendarCheck } from 'lucide-react';
 
 export default function RemoteReady() {
   const t = useTranslations('remote');
 
   const checks = [t('async'), t('doc'), t('comm')];
 
-  const cards = [
+  type Card = { icon: React.ReactNode; title: string; value: string; note: string; highlight?: boolean };
+  const cards: Card[] = [
     {
       icon: <Clock size={18} aria-hidden="true" style={{ color: 'var(--accent)' }} />,
       title: t('tz_title'),
@@ -24,6 +25,13 @@ export default function RemoteReady() {
       title: t('tools_title'),
       value: t('tools_val'),
       note: '',
+    },
+    {
+      icon: <CalendarCheck size={18} aria-hidden="true" style={{ color: 'var(--green)' }} />,
+      title: t('avail_title'),
+      value: t('avail_val'),
+      note: t('avail_note'),
+      highlight: true,
     },
   ];
 
@@ -50,7 +58,8 @@ export default function RemoteReady() {
             <div
               key={card.title}
               style={{
-                background: 'var(--bg2)', border: '0.5px solid var(--border)',
+                background: card.highlight ? 'var(--badge-green-bg)' : 'var(--bg2)',
+                border: `0.5px solid ${card.highlight ? 'var(--badge-green-border)' : 'var(--border)'}`,
                 borderRadius: '12px', padding: '1.25rem',
                 display: 'flex', flexDirection: 'column', gap: '8px',
               }}
