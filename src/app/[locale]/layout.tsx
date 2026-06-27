@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | Franklin Fofe Nodem',
   },
   description:
-    'Product Builder & Software Developer based in Cameroon. I build digital products that solve real-world problems. Open to international remote opportunities.',
+    'Product Builder & Software Developer based in Cameroon. I build software that solves real-world problems — 4 products shipped, open to international remote opportunities.',
   keywords: [
     'Franklin Fofe Nodem',
     'Product Builder',
@@ -22,23 +22,36 @@ export const metadata: Metadata = {
     'remote developer Africa',
     'ImmoGest',
     'Kalamundi',
+    'AgroNova',
+    'Cloudflare Workers',
+    'Supabase',
   ],
   authors: [{ name: 'Franklin Fofe Nodem' }],
   creator: 'Franklin Fofe Nodem',
+  metadataBase: new URL('https://portfolio-franklin.pages.dev'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://portfolio.franklinfofe.com',
+    url: 'https://portfolio-franklin.pages.dev',
     siteName: 'Franklin Fofe Nodem',
     title: 'Franklin Fofe Nodem — Product Builder & Software Developer',
     description:
-      'I build digital products that solve real-world problems. From SaaS platforms to real businesses, I turn ideas into working solutions.',
+      'I build software that solves real-world problems. 4 products shipped. Open to international remote opportunities.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Franklin Fofe Nodem — Product Builder & Software Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Franklin Fofe Nodem — Product Builder & Software Developer',
     description:
-      'I build digital products that solve real-world problems. Open to international remote opportunities.',
+      'I build software that solves real-world problems. 4 products shipped. Open to international remote work.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

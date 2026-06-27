@@ -3,8 +3,13 @@ import { setRequestLocale } from 'next-intl/server';
 import { Download, MapPin, Mail, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'CV',
-  description: 'Curriculum Vitae — Franklin Fofe Nodem, Product Builder & Software Developer.',
+  title: 'CV / Resume',
+  description:
+    'Curriculum Vitae — Franklin Fofe Nodem. Product Builder & Software Developer. Cloudflare Workers · Supabase · Next.js · Vanilla JS. 4 produits en production. Disponible en télétravail international.',
+  openGraph: {
+    url: 'https://portfolio-franklin.pages.dev/en/cv',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 export default async function CVPage({

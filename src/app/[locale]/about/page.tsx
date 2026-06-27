@@ -6,7 +6,11 @@ import { ArrowRight } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Franklin Fofe Nodem — from law and archival science to software. Product Builder based in Cameroon.',
+    'Franklin Fofe Nodem — juriste devenu développeur. Parcours : Droit → Archivistique (ESSTIC) → 4 produits SaaS en production depuis 2022. Basé au Cameroun, disponible en télétravail international.',
+  openGraph: {
+    url: 'https://portfolio-franklin.pages.dev/en/about',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 const timeline = [

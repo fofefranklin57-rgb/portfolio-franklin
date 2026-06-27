@@ -5,7 +5,12 @@ import { ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Products built by Franklin Fofe Nodem — ImmoGest, Kalamundi, Traficam, AgroNova Farms.',
+  description:
+    'Products shipped by Franklin Fofe Nodem — ImmoGest (SaaS immobilier), Kalamundi (publication numérique), AgroNova Farms (aquaculture), Traficam (logistique). Tous en production.',
+  openGraph: {
+    url: 'https://portfolio-franklin.pages.dev/en/projects',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 const projects = [
