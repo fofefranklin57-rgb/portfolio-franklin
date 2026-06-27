@@ -17,10 +17,11 @@ const projects = [
   {
     slug: 'immogest',
     name: 'ImmoGest',
+    category: { fr: 'Produit SaaS', en: 'SaaS Product' },
     role: { fr: 'Fondateur · Product Builder', en: 'Founder · Product Builder' },
     description: {
-      fr: "Aide les agences immobilières d'Afrique francophone à gérer locataires, paiements, baux et documents depuis une seule plateforme. Construit avec Vanilla JS, Cloudflare Workers et Supabase. En production depuis 2024.",
-      en: 'Helping real estate agencies across francophone Africa manage tenants, payments, leases and documents from one platform. Built with Vanilla JS, Cloudflare Workers and Supabase. In production since 2024.',
+      fr: "Aide les agences immobilières d'Afrique francophone à gérer locataires, paiements, baux et documents depuis une seule plateforme. En production depuis 2024.",
+      en: 'Helping real estate agencies across francophone Africa manage tenants, payments, leases and documents from one platform. In production since 2024.',
     },
     status: 'live',
     stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase'],
@@ -30,6 +31,7 @@ const projects = [
   {
     slug: 'kalamundi',
     name: 'Kalamundi',
+    category: { fr: 'Produit Digital', en: 'Digital Product' },
     role: { fr: 'Fondateur · Product Builder', en: 'Founder · Product Builder' },
     description: {
       fr: "Aide les auteurs africains à publier, distribuer et valoriser leur travail à travers une plateforme numérique moderne, avec studio de création et génération d'illustrations IA.",
@@ -42,6 +44,7 @@ const projects = [
   {
     slug: 'traficam',
     name: 'Traficam',
+    category: { fr: 'Produit Digital', en: 'Digital Product' },
     role: { fr: 'Fondateur · Product Builder', en: 'Founder · Product Builder' },
     description: {
       fr: 'Résoudre le manque de traçabilité logistique au Cameroun — suivi des marchandises, coordination des transports et documentation adaptés au contexte local.',
@@ -54,10 +57,11 @@ const projects = [
   {
     slug: 'agronova',
     name: 'AgroNova Farms',
+    category: { fr: 'Entreprise Réelle', en: 'Real-World Venture' },
     role: { fr: 'Fondateur · Opérateur', en: 'Founder · Operator' },
     description: {
-      fr: "A lancé et développé une exploitation piscicole de 300 à 700 silures par cycle en optimisant les processus de production, d'alimentation et de suivi sanitaire.",
-      en: 'Built and scaled a fish farming operation from 300 to 700 catfish per production cycle while improving feeding, monitoring and health management processes.',
+      fr: "Projet agro-entrepreneurial opérationnel — pisciculture de 700 silures par cycle comme première étape d'une entreprise agricole diversifiée : avoculture, plantain, transformation agroalimentaire.",
+      en: 'Operational agribusiness venture — catfish production at 700 per cycle as the first step of a diversified agricultural company: avocado farming, plantain, food processing.',
     },
     status: 'live',
     stack: ['Agriculture', 'Process Design', 'Documentation'],
@@ -100,6 +104,8 @@ export default async function ProjectsPage({
           const role = project.role[l];
           const s = statusColors[project.status];
 
+          const category = project.category[l];
+
           return (
             <Link key={project.slug} href={`/${locale}/projects/${project.slug}`} style={{ textDecoration: 'none' }}>
               <article
@@ -108,6 +114,14 @@ export default async function ProjectsPage({
                   borderRadius: '12px', padding: '1.75rem', cursor: 'pointer',
                 }}
               >
+                <div style={{ marginBottom: '6px' }}>
+                  <span style={{
+                    fontSize: '10px', color: 'var(--text4)',
+                    textTransform: 'uppercase', letterSpacing: '0.1em',
+                  }}>
+                    {category}
+                  </span>
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '8px' }}>
                   <h2 style={{ fontSize: '18px', fontWeight: 500, color: 'var(--text1)', margin: 0 }}>
                     {project.name}

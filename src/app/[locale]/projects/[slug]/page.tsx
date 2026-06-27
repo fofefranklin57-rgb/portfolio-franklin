@@ -149,35 +149,49 @@ const caseStudies: Record<string, CaseStudy> = {
   agronova: {
     name: 'AgroNova Farms',
     tagline: {
-      fr: 'Ferme piscicole gérée avec rigueur — 700 silures par cycle.',
-      en: 'Rigorously managed fish farm — 700 catfish per cycle.',
+      fr: 'Entreprise agricole en construction — de la pisciculture vers une exploitation diversifiée.',
+      en: 'Agribusiness in the making — from catfish farming toward a diversified agricultural company.',
     },
     status: 'live',
     year: 2022,
-    stack: ['Agriculture', 'Product Management', 'Documentation', 'Process Design'],
+    stack: ['Aquaculture', 'Process Design', 'Documentation', 'Operations Management'],
     summary: {
-      fr: 'AgroNova Farms est une exploitation piscicole que j\'ai lancée et gérée à Yaoundé. Ce n\'est pas un projet logiciel — c\'est un projet entrepreneurial réel, avec des contraintes physiques, des cycles de production et des résultats mesurables. Il illustre ma capacité à construire et gérer des systèmes complexes au-delà du code.',
-      en: 'AgroNova Farms is a fish farming operation I launched and managed in Yaoundé. This is not a software project — it\'s a real entrepreneurial venture, with physical constraints, production cycles and measurable results. It illustrates my ability to build and manage complex systems beyond code.',
+      fr: 'AgroNova Farms n\'est pas une simple ferme piscicole. C\'est un projet entrepreneurial agricole dont la vision est de construire une exploitation moderne, durable et progressivement diversifiée. La pisciculture constitue la première activité opérationnelle — et sert de preuve de capacité d\'exécution. Ce projet démontre que ma capacité à construire et opérer des systèmes complexes va bien au-delà du code.',
+      en: 'AgroNova Farms is not simply a fish farm. It\'s an agribusiness entrepreneurial project with a vision to build a modern, sustainable and progressively diversified agricultural company. Catfish farming is the first operational activity — and serves as proof of execution capability. This project demonstrates that my ability to build and operate complex systems goes well beyond code.',
     },
     metrics: [
       { value: '700', label: { fr: 'Silures / cycle', en: 'Catfish / cycle' } },
-      { value: '2×', label: { fr: 'Capacité augmentée', en: 'Capacity scaled' } },
+      { value: '300→700', label: { fr: 'Progression de capacité', en: 'Capacity growth' } },
       { value: '2022', label: { fr: 'Lancement', en: 'Launch year' } },
-      { value: '100%', label: { fr: 'Opérationnel', en: 'Operational' } },
+      { value: 'Multi', label: { fr: 'Axes de diversification', en: 'Diversification axes' } },
     ],
     sections: [
       {
-        heading: { fr: 'Contexte', en: 'Context' },
+        heading: { fr: 'Pourquoi AgroNova', en: 'Why AgroNova' },
         body: {
-          fr: 'En 2022, j\'ai lancé AgroNova Farms comme une entreprise d\'aquaculture à Yaoundé. Le projet est parti de zéro : choix du site, installation des bassins, sourcing des alevins, gestion des cycles d\'alimentation et suivi de la croissance.\n\nLa capacité initiale était de 300 silures par cycle. En optimisant les processus d\'alimentation, la densité des bassins et le suivi sanitaire, j\'ai porté cette capacité à 700 par cycle.',
-          en: 'In 2022, I launched AgroNova Farms as an aquaculture business in Yaoundé. The project started from scratch: site selection, pond installation, fingerling sourcing, feeding cycle management and growth monitoring.\n\nInitial capacity was 300 catfish per cycle. By optimizing feeding processes, pond density and health monitoring, I scaled this capacity to 700 per cycle.',
+          fr: 'AgroNova Farms est né d\'un constat : l\'Afrique dispose d\'un potentiel agricole immense, mais les petits exploitants manquent d\'outils, de méthodes et de documentation pour professionnaliser leurs opérations.\n\nMon objectif n\'était pas de créer une ferme de subsistance. C\'était de démontrer qu\'il est possible de construire une entreprise agricole avec rigueur — documentation, itérations, mesures — exactement comme on construit un produit logiciel.\n\nLa pisciculture a été choisie comme point de départ car elle présente un cycle de production court (environ 6 mois), des besoins en capital initiaux modérés, et des résultats mesurables rapidement.',
+          en: 'AgroNova Farms was born from an observation: Africa has immense agricultural potential, but small operators lack the tools, methods and documentation to professionalize their operations.\n\nMy goal was not to create a subsistence farm. It was to demonstrate that it\'s possible to build an agricultural business with rigor — documentation, iterations, measurements — exactly like building a software product.\n\nCatfish farming was chosen as the starting point because it offers a short production cycle (around 6 months), moderate initial capital requirements, and quickly measurable results.',
+        },
+      },
+      {
+        heading: { fr: 'La progression opérationnelle', en: 'Operational progression' },
+        body: {
+          fr: 'Le projet est parti de zéro en 2022 : choix du site, installation des bassins, sourcing des alevins, mise en place des protocoles d\'alimentation et de suivi sanitaire.\n\n**300 silures** au démarrage. Ensuite **500**, puis **700** — non pas par simple augmentation du volume, mais par amélioration des processus : densité des bassins optimisée, cycles d\'alimentation affinés, suivi de croissance documenté, réduction des pertes sanitaires.\n\nChaque cycle était une itération. Chaque itération produisait des données. Ces données guidaient les décisions suivantes.',
+          en: 'The project started from scratch in 2022: site selection, pond installation, fingerling sourcing, feeding and health monitoring protocols.\n\n**300 catfish** at launch. Then **500**, then **700** — not by simply increasing volume, but by improving processes: optimized pond density, refined feeding cycles, documented growth tracking, reduced health losses.\n\nEvery cycle was an iteration. Every iteration produced data. That data guided the next decisions.',
+        },
+      },
+      {
+        heading: { fr: 'Vision long terme', en: 'Long-term vision' },
+        body: {
+          fr: 'La pisciculture n\'est que la première étape. AgroNova Farms a vocation à devenir une entreprise agricole diversifiée.\n\nLes axes déjà définis :\n\n**Avoculture.** Production d\'avocats greffés à haute valeur ajoutée, destinés à la transformation et à l\'export.\n\n**Culture du plantain.** Culture vivrière à forte demande locale, intégrée aux circuits de distribution régionaux.\n\n**Transformation agroalimentaire.** Production de chips d\'avocat et produits dérivés — création d\'une marque agroalimentaire avec distribution directe.\n\nChaque axe suit la même logique : lancer, documenter, optimiser, diversifier.',
+          en: 'Catfish farming is only the first step. AgroNova Farms aims to become a diversified agricultural company.\n\nAlready defined axes:\n\n**Avocado farming.** Production of high-value grafted avocados, targeted at processing and export.\n\n**Plantain cultivation.** High local-demand crop, integrated into regional distribution networks.\n\n**Food processing.** Production of avocado chips and derivative products — building a food brand with direct distribution.\n\nEach axis follows the same logic: launch, document, optimize, diversify.',
         },
       },
       {
         heading: { fr: 'Ce que ce projet démontre', en: 'What this project demonstrates' },
         body: {
-          fr: 'AgroNova montre que ma capacité à construire des systèmes ne se limite pas au logiciel. Un cycle de production piscicole est un système : entrées (alevins, alimentation, eau), processus (suivi, traitement, optimisation), sorties (poissons commercialisables).\n\nJ\'ai appliqué les mêmes principes que dans le développement logiciel : documentation des processus, itérations sur les méthodes, mesure des résultats, ajustement continu.\n\nC\'est aussi ce projet qui m\'a conduit à construire des outils numériques pour le secteur agricole — et à comprendre les contraintes réelles des entrepreneurs non-tech.',
-          en: 'AgroNova shows that my ability to build systems is not limited to software. A fish production cycle is a system: inputs (fingerlings, feed, water), processes (monitoring, treatment, optimization), outputs (marketable fish).\n\nI applied the same principles as in software development: process documentation, method iteration, results measurement, continuous adjustment.\n\nThis project also led me to build digital tools for the agricultural sector — and to understand the real constraints of non-tech entrepreneurs.',
+          fr: 'AgroNova est la preuve que je ne construis pas seulement des logiciels — je construis des **entreprises**.\n\nUn cycle de production est un système : entrées, processus, sorties. Je l\'ai géré avec les mêmes principes qu\'un produit tech : documentation des processus, itérations sur les méthodes, mesure des résultats, ajustement continu.\n\nCe projet illustre des compétences directement recherchées par les recruteurs : **entrepreneuriat**, **exécution**, **gestion opérationnelle**, **amélioration continue**, **prise de décision basée sur les données**.\n\nC\'est aussi ce projet qui m\'a conduit à comprendre les contraintes réelles des entrepreneurs non-tech — une perspective que j\'applique directement dans la conception de produits comme ImmoGest.',
+          en: 'AgroNova is proof that I don\'t just build software — I build **businesses**.\n\nA production cycle is a system: inputs, processes, outputs. I managed it with the same principles as a tech product: process documentation, method iteration, results measurement, continuous adjustment.\n\nThis project demonstrates skills directly valued by recruiters: **entrepreneurship**, **execution**, **operational management**, **continuous improvement**, **data-driven decision making**.\n\nIt\'s also this project that led me to understand the real constraints of non-tech entrepreneurs — a perspective I apply directly in designing products like ImmoGest.',
         },
       },
     ],

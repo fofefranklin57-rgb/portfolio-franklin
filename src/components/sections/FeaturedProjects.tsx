@@ -45,8 +45,8 @@ const projects: Project[] = [
     slug: 'agronova',
     name: 'AgroNova Farms',
     description: {
-      fr: "A lancé et développé une exploitation piscicole de 300 à 700 silures par cycle en optimisant les processus de production.",
-      en: "Built and scaled a fish farming operation from 300 to 700 catfish per production cycle while improving operational processes.",
+      fr: "Projet agro-entrepreneurial opérationnel — pisciculture de 700 silures par cycle comme première étape d'une entreprise agricole diversifiée.",
+      en: "Operational agribusiness venture — catfish production at 700 per cycle as the first step of a diversified agricultural company.",
     },
     status: 'live',
     role: { fr: 'Fondateur · Opérateur', en: 'Founder · Operator' },
