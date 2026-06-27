@@ -16,11 +16,11 @@ const t = {
   fr: {
     label: 'CV',
     subtitle: 'Product Builder | Software Developer',
-    intro: 'Conception et développement de produits numériques à l'intersection du logiciel, des systèmes d'information et des opérations réelles. Disponible pour des opportunités internationales en télétravail.',
+    intro: "Conception et développement de produits numériques à l'intersection du logiciel, des systèmes d'information et des opérations réelles. Disponible pour des opportunités internationales en télétravail.",
     download: 'Télécharger le CV (PDF)',
     pdf_meta: 'PDF · 2 pages · Mis à jour juin 2026',
     summary_label: 'Profil',
-    summary: 'Parcours pluridisciplinaire à l'intersection du droit, de la gestion de l'information et du développement logiciel. Au cours des trois dernières années, j'ai conçu et mis en production quatre produits numériques — d'une plateforme SaaS de gestion immobilière pour des agences en Afrique francophone à une plateforme de publication africaine et un projet agro-entrepreneurial. Les projets présentés ci-dessous illustrent ma façon d'aborder la conception de produits dans des domaines différents.',
+    summary: "Parcours pluridisciplinaire à l'intersection du droit, de la gestion de l'information et du développement logiciel. Au cours des trois dernières années, j'ai conçu et mis en production quatre produits numériques — d'une plateforme SaaS de gestion immobilière pour des agences en Afrique francophone à une plateforme de publication africaine et un projet agro-entrepreneurial. Les projets présentés ci-dessous illustrent ma façon d'aborder la conception de produits dans des domaines différents.",
     highlights_label: 'Points clés',
     highlights: [
       '4 produits conçus et mis en production',
