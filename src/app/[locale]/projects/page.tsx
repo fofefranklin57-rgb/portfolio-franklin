@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-import ExternalLinkIcon from '@/components/ExternalLinkIcon';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -25,7 +24,6 @@ const projects = [
     },
     status: 'live',
     stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase'],
-    url: 'https://immogest-34w.pages.dev',
     year: 2024,
   },
   {
@@ -136,9 +134,6 @@ export default async function ProjectsPage({
                       {s.label}
                     </span>
                     <span style={{ fontSize: '11px', color: 'var(--text4)' }}>{project.year}</span>
-                    {project.url && (
-                      <ExternalLinkIcon href={project.url} label={`Visit ${project.name}`} />
-                    )}
                   </div>
                 </div>
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { routing } from '@/i18n/routing';
 
 type Locale = 'fr' | 'en';
@@ -17,17 +17,24 @@ type Screenshot = {
   caption: Record<Locale, string>;
 };
 
+type CTA = {
+  icon: string;
+  label: Record<Locale, string>;
+  href: string;
+  primary?: boolean;
+};
+
 type CaseStudy = {
   name: string;
   tagline: Record<Locale, string>;
   status: 'live' | 'beta' | 'dev';
   year: number;
   stack: string[];
-  url?: string;
   screenshots?: Screenshot[];
   summary: Record<Locale, string>;
   metrics: { value: string; label: Record<Locale, string> }[];
   sections: Section[];
+  ctas?: CTA[];
 };
 
 const caseStudies: Record<string, CaseStudy> = {
@@ -40,7 +47,9 @@ const caseStudies: Record<string, CaseStudy> = {
     status: 'live',
     year: 2024,
     stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase', 'PostgreSQL', 'Cloudflare Pages'],
-    url: 'https://immogest-34w.pages.dev',
+    ctas: [
+      { icon: '🔐', label: { fr: 'Se connecter', en: 'Sign In' }, href: 'https://immogest-34w.pages.dev', primary: true },
+    ],
     screenshots: [
       { src: '/immogest-landing.png', caption: { fr: 'Page d\'accueil — fonctionnalités et badges', en: 'Landing page — features and badges' } },
       { src: '/immogest-dashboard.png', caption: { fr: 'Tableau de bord — vue gestionnaire en production', en: 'Dashboard — manager view in production' } },
@@ -111,6 +120,9 @@ const caseStudies: Record<string, CaseStudy> = {
     status: 'live',
     year: 2023,
     stack: ['Flutter', 'Next.js', 'Cloudflare Workers', 'Supabase', 'AI generation'],
+    ctas: [
+      { icon: '🌐', label: { fr: 'Visiter la plateforme', en: 'Visit Platform' }, href: 'https://kalamundi.pages.dev/', primary: true },
+    ],
     summary: {
       fr: 'Kalamundi est une plateforme complète de publication numérique pensée pour les auteurs africains. Elle intègre un studio de création de contenu, une bibliothèque de lecteurs et un système de génération d\'illustrations assisté par IA.',
       en: 'Kalamundi is a complete digital publishing platform designed for African authors. It integrates a content creation studio, a reader library and an AI-assisted illustration generation system.',
@@ -211,6 +223,9 @@ const caseStudies: Record<string, CaseStudy> = {
     status: 'dev',
     year: 2024,
     stack: ['Next.js', 'TypeScript', 'Supabase'],
+    ctas: [
+      { icon: '▶', label: { fr: 'Voir la démo', en: 'Live Demo' }, href: 'https://traficam-demo.fofefranklin57.workers.dev/', primary: true },
+    ],
     summary: {
       fr: 'Traficam est un système de gestion logistique et de transport conçu pour le contexte camerounais. Le projet est en cours de développement.',
       en: 'Traficam is a logistics and transport management system designed for the Cameroonian context. The project is currently in development.',
@@ -306,20 +321,6 @@ export default async function CaseStudyPage({
             {status.label[l]}
           </span>
           <span style={{ fontSize: '12px', color: 'var(--text4)' }}>{cs.year}</span>
-          {cs.url && (
-            <a
-              href={cs.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '5px',
-                fontSize: '12px', color: 'var(--accent)', textDecoration: 'none',
-              }}
-            >
-              {locale === 'fr' ? 'Voir le produit' : 'See the product'}
-              <ExternalLink size={12} aria-hidden="true" />
-            </a>
-          )}
         </div>
 
         <h1 style={{ fontSize: 'clamp(28px, 5vw, 38px)', fontWeight: 500, color: 'var(--text1)', margin: '0 0 10px', lineHeight: 1.2 }}>
@@ -453,6 +454,43 @@ export default async function CaseStudyPage({
           </section>
         ))}
       </article>
+
+      {/* CTAs */}
+      {cs.ctas && cs.ctas.length > 0 && (
+        <div style={{
+          marginTop: '3rem',
+          background: 'var(--bg2)', border: '0.5px solid var(--border)',
+          borderRadius: '12px', padding: '1.75rem',
+        }}>
+          <p style={{
+            fontSize: '12px', color: 'var(--text4)', textTransform: 'uppercase',
+            letterSpacing: '0.1em', margin: '0 0 16px', fontWeight: 500,
+          }}>
+            {locale === 'fr' ? 'Explorer le projet' : 'Explore the project'}
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {cs.ctas.map((cta, i) => (
+              <a
+                key={i}
+                href={cta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  padding: '10px 20px', borderRadius: '8px',
+                  fontSize: '13px', fontWeight: 500, textDecoration: 'none',
+                  ...(cta.primary
+                    ? { background: 'var(--accent)', color: '#fff' }
+                    : { background: 'var(--bg3)', color: 'var(--text2)', border: '0.5px solid var(--border)' }
+                  ),
+                }}
+              >
+                <span>{cta.icon}</span> {cta.label[l]}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Footer nav */}
       <div style={{

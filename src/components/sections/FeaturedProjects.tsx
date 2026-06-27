@@ -26,7 +26,6 @@ const projects: Project[] = [
     status: 'live',
     role: { fr: 'Fondateur · Product Builder', en: 'Founder · Product Builder' },
     stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase'],
-    url: 'https://immogest-34w.pages.dev',
     year: 2024,
   },
   {
