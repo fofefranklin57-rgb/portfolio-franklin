@@ -18,6 +18,7 @@ const t = {
     subtitle: 'Product Builder | Software Developer',
     intro: "Conception et développement de produits numériques à l'intersection du logiciel, des systèmes d'information et des opérations réelles. Disponible pour des opportunités internationales en télétravail.",
     download: 'Télécharger le CV (PDF)',
+    download_href: '/cv-franklin-fofe-nodem-fr.pdf',
     pdf_meta: 'PDF · 2 pages · Mis à jour juin 2026',
     summary_label: 'Profil',
     summary: "Parcours pluridisciplinaire à l'intersection du droit, de la gestion de l'information et du développement logiciel. Au cours des trois dernières années, j'ai conçu et mis en production quatre produits numériques — d'une plateforme SaaS de gestion immobilière pour des agences en Afrique francophone à une plateforme de publication africaine et un projet agro-entrepreneurial. Les projets présentés ci-dessous illustrent ma façon d'aborder la conception de produits dans des domaines différents.",
@@ -48,13 +49,16 @@ const t = {
     cta_tagline: 'Ce résumé présente le parcours. Le portfolio montre le travail qui en découle.',
     cta_body: 'Téléchargez le CV complet pour accéder au détail des projets, compétences et expériences.',
     cta_btn: 'Télécharger le CV (PDF)',
-    cta_note: 'Vous cherchez une version adaptée à un poste spécifique ? N\'hésitez pas à me contacter.',
+    cta_note: 'Version anglaise disponible en téléchargement :',
+    alt_link: 'Resume EN (PDF)',
+    alt_href: '/cv-franklin-fofe-nodem.pdf',
   },
   en: {
     label: 'Resume',
     subtitle: 'Product Builder | Software Developer',
     intro: 'Building digital products at the intersection of software, information systems and real-world operations. Available for international remote opportunities.',
     download: 'Download Resume (PDF)',
+    download_href: '/cv-franklin-fofe-nodem.pdf',
     pdf_meta: 'PDF · 2 pages · Updated June 2026',
     summary_label: 'Professional Summary',
     summary: 'Multidisciplinary background at the intersection of law, information management and software development. Over the past three years, designed and shipped four digital products — from a property management SaaS serving real estate agencies in francophone Africa to a digital publishing platform and an agribusiness venture. The projects below illustrate how I approach product building across different industries.',
@@ -85,7 +89,9 @@ const t = {
     cta_tagline: 'This resume summarizes the journey. The portfolio shows the work behind it.',
     cta_body: 'Download the complete resume for the full detail of my projects, skills and experience.',
     cta_btn: 'Download Resume (PDF)',
-    cta_note: 'Looking for a French version or a role-specific resume? Feel free to get in touch.',
+    cta_note: 'French version also available:',
+    alt_link: 'CV FR (PDF)',
+    alt_href: '/cv-franklin-fofe-nodem-fr.pdf',
   },
 };
 
@@ -127,7 +133,7 @@ export default async function CVPage({
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           <a
-            href="/cv-franklin-fofe-nodem.pdf"
+            href={c.download_href}
             download
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -231,7 +237,7 @@ export default async function CVPage({
           {c.cta_body}
         </p>
         <a
-          href="/cv-franklin-fofe-nodem.pdf"
+          href={c.download_href}
           download
           style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -242,8 +248,15 @@ export default async function CVPage({
         >
           <Download size={14} /> {c.cta_btn}
         </a>
-        <p style={{ fontSize: '12px', color: 'var(--text4)', margin: '14px 0 0', fontStyle: 'italic' }}>
-          {c.cta_note}
+        <p style={{ fontSize: '12px', color: 'var(--text4)', margin: '14px 0 0' }}>
+          {c.cta_note}{' '}
+          <a
+            href={c.alt_href}
+            download
+            style={{ color: 'var(--text3)', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+          >
+            {c.alt_link}
+          </a>
         </p>
       </div>
 
