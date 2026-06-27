@@ -181,7 +181,7 @@ export default async function CVPage({
         <p style={{ fontSize: '15px', color: 'var(--accent)', margin: '0 0 1.5rem', fontWeight: 500 }}>
           {t.subtitle}
         </p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <a
             href="/cv-franklin-fofe-nodem.pdf"
             download
@@ -189,18 +189,16 @@ export default async function CVPage({
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               padding: '10px 18px', background: 'var(--accent)', color: '#fff',
               borderRadius: '8px', fontSize: '13px', fontWeight: 500,
-              textDecoration: 'none',
+              textDecoration: 'none', width: 'fit-content',
             }}
           >
             <Download size={14} /> {t.download_main}
           </a>
-          <a
-            href="/cv-franklin-fofe-nodem-fr.pdf"
-            download
-            style={{ fontSize: '12px', color: 'var(--text3)', textDecoration: 'none' }}
-          >
-            {t.download_fr}
-          </a>
+          <p style={{ fontSize: '12px', color: 'var(--text4)', margin: 0 }}>
+            {l === 'fr'
+              ? 'Vous cherchez une version française ou adaptée à un poste spécifique ? N\'hésitez pas à me contacter.'
+              : 'Looking for a French version or a role-specific resume? Feel free to get in touch.'}
+          </p>
         </div>
       </div>
 
