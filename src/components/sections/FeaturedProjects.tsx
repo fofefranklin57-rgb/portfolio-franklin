@@ -24,7 +24,7 @@ const projects: Project[] = [
     },
     status: 'live',
     stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase', 'PostgreSQL'],
-    url: 'https://immogest.app',
+    url: 'https://immogest-34w.pages.dev',
     year: 2024,
   },
   {

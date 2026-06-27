@@ -12,6 +12,11 @@ type Section = {
   body: Record<Locale, string>;
 };
 
+type Screenshot = {
+  src: string;
+  caption: Record<Locale, string>;
+};
+
 type CaseStudy = {
   name: string;
   tagline: Record<Locale, string>;
@@ -19,6 +24,7 @@ type CaseStudy = {
   year: number;
   stack: string[];
   url?: string;
+  screenshots?: Screenshot[];
   summary: Record<Locale, string>;
   metrics: { value: string; label: Record<Locale, string> }[];
   sections: Section[];
@@ -34,7 +40,12 @@ const caseStudies: Record<string, CaseStudy> = {
     status: 'live',
     year: 2024,
     stack: ['Vanilla JS', 'Cloudflare Workers', 'Supabase', 'PostgreSQL', 'Cloudflare Pages'],
-    url: 'https://immogest.app',
+    url: 'https://immogest-34w.pages.dev',
+    screenshots: [
+      { src: '/immogest-landing.png', caption: { fr: 'Page d\'accueil — fonctionnalités et badges', en: 'Landing page — features and badges' } },
+      { src: '/immogest-dashboard.png', caption: { fr: 'Tableau de bord — vue gestionnaire en production', en: 'Dashboard — manager view in production' } },
+      { src: '/immogest-tenants.png', caption: { fr: 'Liste locataires — statuts de paiement et actions', en: 'Tenant list — payment statuses and actions' } },
+    ],
     summary: {
       fr: 'ImmoGest est une application SaaS complète qui permet aux agences immobilières d\'Afrique francophone de gérer leurs immeubles, locataires, paiements et documents depuis une interface unique. Le projet est passé d\'une idée à un produit en production en moins de 12 mois.',
       en: 'ImmoGest is a full SaaS application that allows real estate agencies in francophone Africa to manage their buildings, tenants, payments and documents from a single interface. The project went from idea to production in under 12 months.',
@@ -352,6 +363,50 @@ export default async function CaseStudyPage({
               </span>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Screenshots */}
+      {cs.screenshots && cs.screenshots.length > 0 && (
+        <div style={{ marginBottom: '3rem' }}>
+          <h2 style={{
+            fontSize: '13px', fontWeight: 500, color: 'var(--text4)',
+            textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 16px',
+          }}>
+            {locale === 'fr' ? 'Captures d\'écran' : 'Screenshots'}
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1rem',
+          }}>
+            {cs.screenshots.map((shot, i) => (
+              <figure key={i} style={{ margin: 0 }}>
+                <div style={{
+                  background: 'var(--bg2)', border: '0.5px solid var(--border)',
+                  borderRadius: '10px', overflow: 'hidden',
+                  display: 'flex', justifyContent: 'center', alignItems: 'center',
+                  padding: '8px',
+                }}>
+                  <img
+                    src={shot.src}
+                    alt={shot.caption[l]}
+                    style={{
+                      width: '100%', maxWidth: '220px',
+                      borderRadius: '6px',
+                      display: 'block', margin: '0 auto',
+                    }}
+                  />
+                </div>
+                <figcaption style={{
+                  fontSize: '11px', color: 'var(--text4)',
+                  textAlign: 'center', marginTop: '8px', lineHeight: 1.4,
+                }}>
+                  {shot.caption[l]}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       )}
 
