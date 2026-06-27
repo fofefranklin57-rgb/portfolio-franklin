@@ -1,149 +1,96 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-import { Download, ArrowRight } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Resume — Franklin Fofe Nodem',
   description:
-    'Career overview — Franklin Fofe Nodem. Product Builder & Software Developer. Law · Archival Science · Software. Available for remote international opportunities.',
+    'Resume — Franklin Fofe Nodem. Product Builder & Software Developer. Law · Archival Science · Software. Available for international remote opportunities.',
   openGraph: {
     url: 'https://portfolio-franklin.pages.dev/en/cv',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };
 
-const copy = {
+const t = {
   fr: {
-    label: 'Parcours',
-    title: 'Franklin Fofe Nodem',
+    label: 'CV',
     subtitle: 'Product Builder | Software Developer',
-    download_main: 'Télécharger le CV (PDF)',
-    download_fr: 'Version française',
-    timeline_label: 'Évolution',
+    intro: 'Juriste de formation, archiviste de métier, développeur par nécessité. Disponible pour des opportunités internationales en télétravail.',
+    updated: 'Mis à jour : juin 2026',
+    download: 'Télécharger le CV (PDF)',
+    summary_label: 'Profil',
+    summary: "Parcours multidisciplinaire à l'intersection du droit, de la gestion de l'information et du développement logiciel. Au cours des trois dernières années, j'ai conçu et mis en production quatre produits numériques, du SaaS immobilier à une plateforme de publication africaine. Je travaille en autonomie complète — de la conception au déploiement — avec une attention particulière à la documentation, aux processus et à la valeur réelle créée pour les utilisateurs.",
     highlights_label: 'Points clés',
-    experience_label: 'Expériences sélectionnées',
-    projects_label: 'Projets',
-    education_label: 'Formation',
-    languages_label: 'Langues',
-    skills_link: 'Explorer mes compétences techniques →',
-    view_case: 'Voir l\'étude de cas →',
-    download_cta: 'Le PDF contient le détail complet de mon parcours.',
-    download_btn: 'Télécharger le CV (PDF)',
-    french_native: 'Français natif',
-    english_pro: 'Anglais professionnel',
+    highlights: [
+      '4 produits conçus et mis en production',
+      'Fondateur d\'ImmoGest — SaaS immobilier en Afrique francophone',
+      'Fondateur de Kalamundi — plateforme de publication numérique africaine',
+      'Fondateur d\'AgroNova Farms — entreprise agro-entrepreneuriale',
+      'Parcours multidisciplinaire : Droit · Archivistique · Logiciel',
+      'Disponible immédiatement pour des missions remote internationales',
+    ],
+    exp_label: 'Expériences sélectionnées',
+    exp: [
+      { org: 'Cabinet CRAA', role: 'Conseiller juridique & Records Manager', period: '2018 →' },
+      { org: 'CHANAS Assurances S.A.', role: 'Gestion documentaire · via Onyx Manpower', period: '2021–2022' },
+      { org: 'Missions archivistiques antérieures', role: 'MINESEC · Marchés Publics · NEZAFI Capital', period: '2018–2021' },
+    ],
+    exp_note: 'Le détail complet des expériences est disponible dans le CV téléchargeable.',
+    edu_label: 'Formation',
+    edu: [
+      { degree: 'Master II — Droit Public', school: 'Université de Yaoundé II · 2016–2018' },
+      { degree: 'Licence Pro — Archivistique & Records Management', school: 'ESSTIC, Université de Yaoundé II · 2017–2020' },
+    ],
+    lang_label: 'Langues',
+    lang: ['Français — Natif', 'Anglais — Professionnel'],
+    cta_title: 'Intéressé par mon profil ?',
+    cta_body: 'Téléchargez le CV complet pour accéder au détail de mes projets, compétences et expériences.',
+    cta_btn: 'Télécharger le CV (PDF)',
+    cta_note: 'Vous cherchez une version française ou adaptée à un poste spécifique ? N\'hésitez pas à me contacter.',
   },
   en: {
-    label: 'Career',
-    title: 'Franklin Fofe Nodem',
+    label: 'Resume',
     subtitle: 'Product Builder | Software Developer',
-    download_main: 'Download Resume (PDF)',
-    download_fr: 'French version',
-    timeline_label: 'Timeline',
-    highlights_label: 'Career highlights',
-    experience_label: 'Selected experience',
-    projects_label: 'Projects',
-    education_label: 'Education',
-    languages_label: 'Languages',
-    skills_link: 'Explore my technical skills →',
-    view_case: 'See case study →',
-    download_cta: 'The PDF contains the full detail of my background.',
-    download_btn: 'Download Resume (PDF)',
-    french_native: 'French — Native',
-    english_pro: 'English — Professional',
+    intro: 'Trained as a lawyer, practiced as an archivist, became a developer by necessity. Available for international remote opportunities.',
+    updated: 'Last updated: June 2026',
+    download: 'Download Resume (PDF)',
+    summary_label: 'Professional Summary',
+    summary: 'Multidisciplinary background at the intersection of law, information management and software development. Over the past three years, designed and shipped four digital products — from a property management SaaS serving real estate agencies in francophone Africa to a digital publishing platform and an agribusiness venture. Work independently across the full product cycle — from conception to deployment — with a focus on documentation, process design and real value delivered to users.',
+    highlights_label: 'Career Highlights',
+    highlights: [
+      '4 products designed and shipped to production',
+      'Founded ImmoGest — property SaaS for francophone Africa',
+      'Founded Kalamundi — African digital publishing platform',
+      'Founded AgroNova Farms — agribusiness venture',
+      'Multidisciplinary background: Law · Archival Science · Software',
+      'Available immediately for international remote opportunities',
+    ],
+    exp_label: 'Selected Experience',
+    exp: [
+      { org: 'Cabinet CRAA', role: 'Legal Counsel & Records Manager', period: '2018 →' },
+      { org: 'CHANAS Assurances S.A.', role: 'Records Management · via Onyx Manpower', period: '2021–2022' },
+      { org: 'Earlier Archival Assignments', role: 'MINESEC · Ministry of Public Contracts · NEZAFI Capital', period: '2018–2021' },
+    ],
+    exp_note: 'The complete experience is available in the downloadable resume.',
+    edu_label: 'Education',
+    edu: [
+      { degree: 'Master II — Public Law', school: 'University of Yaoundé II · 2016–2018' },
+      { degree: "Professional Bachelor's — Archival Science & Records Management", school: 'ESSTIC, University of Yaoundé II · 2017–2020' },
+    ],
+    lang_label: 'Languages',
+    lang: ['French — Native', 'English — Professional'],
+    cta_title: 'Interested in learning more?',
+    cta_body: 'Download the complete resume for the full detail of my projects, skills and experience.',
+    cta_btn: 'Download Resume (PDF)',
+    cta_note: 'Looking for a French version or a role-specific resume? Feel free to get in touch.',
   },
 };
 
-const timeline = [
-  { year: '2016', fr: 'Master II — Droit Public, Université de Yaoundé II', en: 'Master II — Public Law, University of Yaoundé II' },
-  { year: '2017', fr: 'Licence Pro — Archivistique & Records Management, ESSTIC', en: "Professional Bachelor's — Archival Science & Records Management, ESSTIC" },
-  { year: '2018', fr: 'Cabinet CRAA — Conseil juridique & gestion documentaire', en: 'Cabinet CRAA — Legal counsel & records management' },
-  { year: '2021', fr: 'CHANAS Assurances — Gestion documentaire (via Onyx Manpower)', en: 'CHANAS Assurances — Records management (via Onyx Manpower)' },
-  { year: '2022', fr: 'AgroNova Farms — Premier projet entrepreneurial', en: 'AgroNova Farms — First entrepreneurial venture' },
-  { year: '2023', fr: 'Kalamundi — Plateforme de publication numérique', en: 'Kalamundi — Digital publishing platform' },
-  { year: '2024', fr: 'ImmoGest — SaaS immobilier, en production', en: 'ImmoGest — Property SaaS, in production' },
-  { year: 'Now', fr: 'Product Builder · Software Developer · Disponible', en: 'Product Builder · Software Developer · Available', now: true },
-];
-
-const highlights = {
-  fr: [
-    '4 produits construits et mis en production',
-    'Fondateur d\'ImmoGest — SaaS immobilier en Afrique francophone',
-    'Fondateur de Kalamundi — plateforme de publication africaine',
-    'Fondateur d\'AgroNova Farms — entreprise agricole en croissance',
-    'Parcours multidisciplinaire : Droit · Archivistique · Logiciel',
-    'Disponible immédiatement pour des missions remote internationales',
-  ],
-  en: [
-    '4 products built and shipped to production',
-    'Founded ImmoGest — property SaaS for francophone Africa',
-    'Founded Kalamundi — African digital publishing platform',
-    'Founded AgroNova Farms — growing agribusiness venture',
-    'Multidisciplinary background: Law · Archival Science · Software',
-    'Available immediately for international remote opportunities',
-  ],
-};
-
-const experience = {
-  fr: [
-    {
-      org: 'Cabinet CRAA',
-      role: 'Conseiller juridique — Gestion documentaire',
-      period: '2018 →',
-      note: 'Conseil juridique, rédaction, archivage et gestion de l\'information.',
-    },
-    {
-      org: 'CHANAS Assurances S.A.',
-      role: 'Gestion documentaire — via Onyx Manpower Services',
-      period: 'Mai 2021 – Fév 2022',
-      note: 'Mise en place de systèmes d\'archivage et de gestion des documents internes.',
-    },
-    {
-      org: 'Autres missions archivistiques',
-      role: 'MINESEC · Ministère des Marchés Publics · NEZAFI Capital',
-      period: '2018 – 2021',
-      note: '',
-    },
-  ],
-  en: [
-    {
-      org: 'Cabinet CRAA',
-      role: 'Legal Counsel — Records Management',
-      period: '2018 →',
-      note: 'Legal advice, drafting, archiving and information management.',
-    },
-    {
-      org: 'CHANAS Assurances S.A.',
-      role: 'Records Management — via Onyx Manpower Services',
-      period: 'May 2021 – Feb 2022',
-      note: 'Implementation of archiving and internal document management systems.',
-    },
-    {
-      org: 'Earlier archival assignments',
-      role: 'MINESEC · Ministry of Public Contracts · NEZAFI Capital',
-      period: '2018 – 2021',
-      note: '',
-    },
-  ],
-};
-
-const projects = [
-  { slug: 'immogest', name: 'ImmoGest', year: '2024' },
-  { slug: 'kalamundi', name: 'Kalamundi', year: '2023' },
-  { slug: 'agronova', name: 'AgroNova Farms', year: '2022' },
-  { slug: 'traficam', name: 'Traficam', year: '2024' },
-];
-
-const education = {
-  fr: [
-    { degree: 'Master II — Droit Public Fondamental', school: 'Université de Yaoundé II', year: '2016–2018' },
-    { degree: 'Licence Professionnelle — Archivistique & Records Management', school: 'ESSTIC, Université de Yaoundé II', year: '2017–2020' },
-  ],
-  en: [
-    { degree: 'Master II — Public Law', school: 'University of Yaoundé II', year: '2016–2018' },
-    { degree: "Professional Bachelor's — Archival Science & Records Management", school: 'ESSTIC, University of Yaoundé II', year: '2017–2020' },
-  ],
-};
+const DIVIDER = (
+  <div style={{ height: '0.5px', background: 'var(--border)', margin: '2rem 0' }} />
+);
 
 export default async function CVPage({
   params,
@@ -153,35 +100,26 @@ export default async function CVPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const l = locale as 'fr' | 'en';
-  const t = copy[l];
-
-  const sectionTitle = (label: string) => (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '2.5rem 0 1.25rem' }}>
-      <h2 style={{
-        fontSize: '11px', fontWeight: 600, color: 'var(--text4)',
-        textTransform: 'uppercase', letterSpacing: '0.12em', margin: 0, whiteSpace: 'nowrap',
-      }}>
-        {label}
-      </h2>
-      <div style={{ flex: 1, height: '0.5px', background: 'var(--border)' }} />
-    </div>
-  );
+  const c = t[l];
 
   return (
-    <div style={{ maxWidth: '760px', margin: '0 auto', padding: '4rem 1.5rem 5rem' }}>
+    <div style={{ maxWidth: '680px', margin: '0 auto', padding: '4rem 1.5rem 5rem' }}>
 
-      {/* Hero */}
-      <div style={{ marginBottom: '3rem' }}>
+      {/* ── HERO ── */}
+      <div style={{ marginBottom: '2.5rem' }}>
         <p style={{ fontSize: '11px', color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>
-          {t.label}
+          {c.label}
         </p>
-        <h1 style={{ fontSize: 'clamp(24px, 4vw, 32px)', fontWeight: 500, color: 'var(--text1)', margin: '0 0 6px', lineHeight: 1.2 }}>
-          {t.title}
+        <h1 style={{ fontSize: 'clamp(22px, 4vw, 30px)', fontWeight: 500, color: 'var(--text1)', margin: '0 0 4px', lineHeight: 1.2 }}>
+          Franklin Fofe Nodem
         </h1>
-        <p style={{ fontSize: '15px', color: 'var(--accent)', margin: '0 0 1.5rem', fontWeight: 500 }}>
-          {t.subtitle}
+        <p style={{ fontSize: '14px', color: 'var(--accent)', margin: '0 0 10px', fontWeight: 500 }}>
+          {c.subtitle}
         </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 1.25rem', lineHeight: 1.6 }}>
+          {c.intro}
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <a
             href="/cv-franklin-fofe-nodem.pdf"
             download
@@ -192,136 +130,106 @@ export default async function CVPage({
               textDecoration: 'none', width: 'fit-content',
             }}
           >
-            <Download size={14} /> {t.download_main}
+            <Download size={14} /> {c.download}
           </a>
-          <p style={{ fontSize: '12px', color: 'var(--text4)', margin: 0 }}>
-            {l === 'fr'
-              ? 'Vous cherchez une version française ou adaptée à un poste spécifique ? N\'hésitez pas à me contacter.'
-              : 'Looking for a French version or a role-specific resume? Feel free to get in touch.'}
-          </p>
+          <p style={{ fontSize: '11px', color: 'var(--text4)', margin: 0 }}>{c.updated}</p>
         </div>
       </div>
 
-      {/* Career Timeline */}
-      {sectionTitle(t.timeline_label)}
-      <div style={{ position: 'relative', paddingLeft: '1.5rem' }}>
-        <div style={{
-          position: 'absolute', left: '6px', top: 0, bottom: 0,
-          width: '1px', background: 'var(--border)',
-        }} />
-        {timeline.map((item, i) => (
-          <div key={i} style={{ position: 'relative', marginBottom: '1rem', paddingBottom: '0' }}>
-            <div style={{
-              position: 'absolute', left: '-1.5rem',
-              width: '13px', height: '13px', borderRadius: '50%',
-              background: item.now ? 'var(--accent)' : 'var(--bg)',
-              border: `1.5px solid ${item.now ? 'var(--accent)' : 'var(--border)'}`,
-              top: '2px',
-            }} />
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'baseline' }}>
-              <span style={{
-                fontSize: '11px', color: item.now ? 'var(--accent)' : 'var(--text4)',
-                fontWeight: item.now ? 600 : 400, whiteSpace: 'nowrap', minWidth: '36px',
-              }}>
-                {item.year}
-              </span>
-              <span style={{
-                fontSize: '13px', color: item.now ? 'var(--text1)' : 'var(--text3)',
-                fontWeight: item.now ? 500 : 400, lineHeight: 1.5,
-              }}>
-                {item[l]}
-              </span>
+      {DIVIDER}
+
+      {/* ── PROFESSIONAL SUMMARY ── */}
+      <div style={{ marginBottom: '2rem' }}>
+        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>
+          {c.summary_label}
+        </h2>
+        <p style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.8, margin: 0, textAlign: 'justify' }}>
+          {c.summary}
+        </p>
+      </div>
+
+      {DIVIDER}
+
+      {/* ── CAREER HIGHLIGHTS ── */}
+      <div style={{ marginBottom: '2rem' }}>
+        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 12px' }}>
+          {c.highlights_label}
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
+          {c.highlights.map((h, i) => (
+            <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+              <span style={{ color: 'var(--green)', fontSize: '13px', lineHeight: 1.6, flexShrink: 0 }}>✓</span>
+              <span style={{ fontSize: '13px', color: 'var(--text2)', lineHeight: 1.6 }}>{h}</span>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Career Highlights */}
-      {sectionTitle(t.highlights_label)}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        {highlights[l].map((h, i) => (
-          <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-            <span style={{ color: 'var(--green)', fontSize: '13px', lineHeight: 1.6, flexShrink: 0 }}>✓</span>
-            <span style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.6 }}>{h}</span>
-          </div>
-        ))}
-      </div>
+      {DIVIDER}
 
-      {/* Projects */}
-      {sectionTitle(t.projects_label)}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-        {projects.map((p) => (
-          <div key={p.slug} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'baseline' }}>
-              <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text1)' }}>{p.name}</span>
-              <span style={{ fontSize: '12px', color: 'var(--text4)' }}>{p.year}</span>
+      {/* ── SELECTED EXPERIENCE ── */}
+      <div style={{ marginBottom: '2rem' }}>
+        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 14px' }}>
+          {c.exp_label}
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '12px' }}>
+          {c.exp.map((e, i) => (
+            <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px' }}>
+              <div>
+                <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text1)' }}>{e.org}</span>
+                <span style={{ fontSize: '12px', color: 'var(--text3)', display: 'block', marginTop: '1px' }}>{e.role}</span>
+              </div>
+              <span style={{ fontSize: '11px', color: 'var(--text4)', whiteSpace: 'nowrap' }}>{e.period}</span>
             </div>
-            <Link
-              href={`/${locale}/projects/${p.slug}`}
-              style={{
-                fontSize: '12px', color: 'var(--accent)', textDecoration: 'none',
-                display: 'inline-flex', alignItems: 'center', gap: '4px',
-              }}
-            >
-              {t.view_case} <ArrowRight size={11} />
-            </Link>
-          </div>
-        ))}
+          ))}
+        </div>
+        <p style={{ fontSize: '12px', color: 'var(--text4)', margin: 0, fontStyle: 'italic' }}>
+          {c.exp_note}
+        </p>
       </div>
 
-      {/* Selected Experience */}
-      {sectionTitle(t.experience_label)}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-        {experience[l].map((e, i) => (
-          <div key={i}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px', marginBottom: '2px' }}>
-              <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text1)' }}>{e.org}</span>
-              <span style={{ fontSize: '12px', color: 'var(--text4)', whiteSpace: 'nowrap' }}>{e.period}</span>
-            </div>
-            <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 2px' }}>{e.role}</p>
-            {e.note && <p style={{ fontSize: '12px', color: 'var(--text4)', margin: 0 }}>{e.note}</p>}
-          </div>
-        ))}
-      </div>
+      {DIVIDER}
 
-      {/* Education */}
-      {sectionTitle(t.education_label)}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        {education[l].map((e, i) => (
-          <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px' }}>
-            <div>
-              <p style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text1)', margin: 0 }}>{e.degree}</p>
+      {/* ── EDUCATION ── */}
+      <div style={{ marginBottom: '2rem' }}>
+        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 12px' }}>
+          {c.edu_label}
+        </h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {c.edu.map((e, i) => (
+            <div key={i}>
+              <p style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text1)', margin: 0 }}>{e.degree}</p>
               <p style={{ fontSize: '12px', color: 'var(--text4)', margin: '2px 0 0' }}>{e.school}</p>
             </div>
-            <span style={{ fontSize: '12px', color: 'var(--accent)', fontWeight: 500, whiteSpace: 'nowrap' }}>{e.year}</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Languages */}
-      {sectionTitle(t.languages_label)}
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-        <span style={{ fontSize: '14px', color: 'var(--text2)' }}>{t.french_native}</span>
-        <span style={{ fontSize: '14px', color: 'var(--text2)' }}>{t.english_pro}</span>
+      {DIVIDER}
+
+      {/* ── LANGUAGES ── */}
+      <div style={{ marginBottom: '2.5rem' }}>
+        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>
+          {c.lang_label}
+        </h2>
+        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+          {c.lang.map((lang, i) => (
+            <span key={i} style={{ fontSize: '13px', color: 'var(--text2)' }}>{lang}</span>
+          ))}
+        </div>
       </div>
 
-      {/* Skills link */}
-      <div style={{ marginTop: '1.5rem' }}>
-        <Link href={`/${locale}#skills`} style={{ fontSize: '13px', color: 'var(--accent)', textDecoration: 'none' }}>
-          {t.skills_link}
-        </Link>
-      </div>
-
-      {/* Download CTA */}
+      {/* ── DOWNLOAD CTA ── */}
       <div style={{
-        marginTop: '3.5rem', padding: '1.5rem',
         background: 'var(--bg2)', border: '0.5px solid var(--border)',
-        borderRadius: '12px', borderLeft: '3px solid var(--accent)',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        flexWrap: 'wrap', gap: '16px',
+        borderRadius: '12px', padding: '1.75rem',
+        borderLeft: '3px solid var(--accent)',
       }}>
-        <p style={{ fontSize: '14px', color: 'var(--text3)', margin: 0 }}>
-          {t.download_cta}
+        <h3 style={{ fontSize: '15px', fontWeight: 500, color: 'var(--text1)', margin: '0 0 6px' }}>
+          {c.cta_title}
+        </h3>
+        <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 1.25rem', lineHeight: 1.6 }}>
+          {c.cta_body}
         </p>
         <a
           href="/cv-franklin-fofe-nodem.pdf"
@@ -330,11 +238,14 @@ export default async function CVPage({
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             padding: '10px 18px', background: 'var(--accent)', color: '#fff',
             borderRadius: '8px', fontSize: '13px', fontWeight: 500,
-            textDecoration: 'none', whiteSpace: 'nowrap',
+            textDecoration: 'none',
           }}
         >
-          <Download size={14} /> {t.download_btn}
+          <Download size={14} /> {c.cta_btn}
         </a>
+        <p style={{ fontSize: '12px', color: 'var(--text4)', margin: '14px 0 0', fontStyle: 'italic' }}>
+          {c.cta_note}
+        </p>
       </div>
 
     </div>
