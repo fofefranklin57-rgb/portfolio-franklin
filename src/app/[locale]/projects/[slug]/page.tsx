@@ -155,6 +155,11 @@ const caseStudies: Record<string, CaseStudy> = {
     status: 'live',
     year: 2022,
     stack: ['Aquaculture', 'Process Design', 'Documentation', 'Operations Management'],
+    screenshots: [
+      { src: '/agronova-bassin.webp', caption: { fr: 'Bassin de production — 700 silures en cours de cycle', en: 'Production tank — 700 catfish mid-cycle' } },
+      { src: '/agronova-franklin.webp', caption: { fr: 'Franklin avec le bassin principal à Yaoundé', en: 'Franklin with the main tank in Yaoundé' } },
+      { src: '/agronova-pesee.webp', caption: { fr: 'Pesée à la vente — 6,2 kg de silures, 2500 FCFA/kg', en: 'Weighing at sale — 6.2 kg of catfish, 2500 FCFA/kg' } },
+    ],
     summary: {
       fr: 'AgroNova Farms n\'est pas une simple ferme piscicole. C\'est un projet entrepreneurial agricole dont la vision est de construire une exploitation moderne, durable et progressivement diversifiée. La pisciculture constitue la première activité opérationnelle — et sert de preuve de capacité d\'exécution. Ce projet démontre que ma capacité à construire et opérer des systèmes complexes va bien au-delà du code.',
       en: 'AgroNova Farms is not simply a fish farm. It\'s an agribusiness entrepreneurial project with a vision to build a modern, sustainable and progressively diversified agricultural company. Catfish farming is the first operational activity — and serves as proof of execution capability. This project demonstrates that my ability to build and operate complex systems goes well beyond code.',
@@ -185,6 +190,13 @@ const caseStudies: Record<string, CaseStudy> = {
         body: {
           fr: 'La pisciculture n\'est que la première étape. AgroNova Farms a vocation à devenir une entreprise agricole diversifiée.\n\nLes axes déjà définis :\n\n**Avoculture.** Production d\'avocats greffés à haute valeur ajoutée, destinés à la transformation et à l\'export.\n\n**Culture du plantain.** Culture vivrière à forte demande locale, intégrée aux circuits de distribution régionaux.\n\n**Transformation agroalimentaire.** Production de chips d\'avocat et produits dérivés — création d\'une marque agroalimentaire avec distribution directe.\n\nChaque axe suit la même logique : lancer, documenter, optimiser, diversifier.',
           en: 'Catfish farming is only the first step. AgroNova Farms aims to become a diversified agricultural company.\n\nAlready defined axes:\n\n**Avocado farming.** Production of high-value grafted avocados, targeted at processing and export.\n\n**Plantain cultivation.** High local-demand crop, integrated into regional distribution networks.\n\n**Food processing.** Production of avocado chips and derivative products — building a food brand with direct distribution.\n\nEach axis follows the same logic: launch, document, optimize, diversify.',
+        },
+      },
+      {
+        heading: { fr: 'La leçon centrale : distribution avant production', en: 'The core lesson: distribution before production' },
+        body: {
+          fr: 'C\'est l\'enseignement le plus important que j\'ai tiré de cette expérience au Cameroun.\n\nBeaucoup d\'entrepreneurs agricoles africains commencent par produire en masse — et se retrouvent coincés face à un marché qu\'ils ne contrôlent pas. Les prix s\'effondrent à la récolte, les intermédiaires dictent les conditions, la production pourrit faute de débouchés.\n\n**J\'ai fait le choix inverse.** La pisciculture m\'a servi de phase test délibérée : un volume suffisant pour apprendre le terrain, sans risquer un investissement massif. L\'objectif n\'était pas de maximiser la production — c\'était de comprendre les circuits de distribution, identifier les acheteurs fiables, tester les prix du marché, et construire des relations commerciales durables.\n\nCette logique — **maîtriser la distribution avant de s\'attaquer à la production à grande échelle** — est maintenant le principe directeur de toute la stratégie AgroNova. Elle s\'applique à la pisciculture, à l\'avoculture, au plantain, à la transformation.',
+          en: 'This is the most important lesson I drew from this experience in Cameroon.\n\nMany African agricultural entrepreneurs start by producing at scale — and end up trapped by a market they don\'t control. Prices collapse at harvest time, intermediaries dictate terms, production goes to waste for lack of buyers.\n\n**I made the opposite choice.** Catfish farming served as a deliberate test phase: enough volume to learn the terrain, without risking a massive investment. The goal was not to maximize production — it was to understand distribution channels, identify reliable buyers, test market prices, and build durable commercial relationships.\n\nThis logic — **mastering distribution before attacking large-scale production** — is now the guiding principle of the entire AgroNova strategy. It applies to catfish, avocado farming, plantain, and food processing.',
         },
       },
       {
