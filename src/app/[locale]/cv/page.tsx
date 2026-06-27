@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
 import { Download } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -17,27 +16,27 @@ const t = {
   fr: {
     label: 'CV',
     subtitle: 'Product Builder | Software Developer',
-    intro: 'Juriste de formation, archiviste de métier, développeur par nécessité. Disponible pour des opportunités internationales en télétravail.',
-    updated: 'Mis à jour : juin 2026',
+    intro: 'Conception et développement de produits numériques à l'intersection du logiciel, des systèmes d'information et des opérations réelles. Disponible pour des opportunités internationales en télétravail.',
     download: 'Télécharger le CV (PDF)',
+    pdf_meta: 'PDF · 2 pages · Mis à jour juin 2026',
     summary_label: 'Profil',
-    summary: "Parcours multidisciplinaire à l'intersection du droit, de la gestion de l'information et du développement logiciel. Au cours des trois dernières années, j'ai conçu et mis en production quatre produits numériques, du SaaS immobilier à une plateforme de publication africaine. Je travaille en autonomie complète — de la conception au déploiement — avec une attention particulière à la documentation, aux processus et à la valeur réelle créée pour les utilisateurs.",
+    summary: 'Parcours pluridisciplinaire à l'intersection du droit, de la gestion de l'information et du développement logiciel. Au cours des trois dernières années, j'ai conçu et mis en production quatre produits numériques — d'une plateforme SaaS de gestion immobilière pour des agences en Afrique francophone à une plateforme de publication africaine et un projet agro-entrepreneurial. Les projets présentés ci-dessous illustrent ma façon d'aborder la conception de produits dans des domaines différents.',
     highlights_label: 'Points clés',
     highlights: [
       '4 produits conçus et mis en production',
-      'Fondateur d\'ImmoGest — SaaS immobilier en Afrique francophone',
-      'Fondateur de Kalamundi — plateforme de publication numérique africaine',
-      'Fondateur d\'AgroNova Farms — entreprise agro-entrepreneuriale',
+      'Fondateur d\'ImmoGest — SaaS de gestion immobilière en Afrique francophone',
+      'Construction de Kalamundi — plateforme de publication numérique africaine',
+      'Construction d\'AgroNova Farms — projet agro-entrepreneurial en cours',
       'Parcours multidisciplinaire : Droit · Archivistique · Logiciel',
       'Disponible immédiatement pour des missions remote internationales',
     ],
     exp_label: 'Expériences sélectionnées',
+    exp_intro: 'Une sélection des postes qui ont façonné mon parcours pluridisciplinaire. L\'historique complet est disponible dans le CV téléchargeable.',
     exp: [
       { org: 'Cabinet CRAA', role: 'Conseiller juridique & Records Manager', period: '2018 →' },
       { org: 'CHANAS Assurances S.A.', role: 'Gestion documentaire · via Onyx Manpower', period: '2021–2022' },
       { org: 'Missions archivistiques antérieures', role: 'MINESEC · Marchés Publics · NEZAFI Capital', period: '2018–2021' },
     ],
-    exp_note: 'Le détail complet des expériences est disponible dans le CV téléchargeable.',
     edu_label: 'Formation',
     edu: [
       { degree: 'Master II — Droit Public', school: 'Université de Yaoundé II · 2016–2018' },
@@ -45,35 +44,36 @@ const t = {
     ],
     lang_label: 'Langues',
     lang: ['Français — Natif', 'Anglais — Professionnel'],
-    cta_title: 'Intéressé par mon profil ?',
-    cta_body: 'Téléchargez le CV complet pour accéder au détail de mes projets, compétences et expériences.',
+    cta_title: 'Vous souhaitez le dossier complet ?',
+    cta_tagline: 'Ce résumé présente le parcours. Le portfolio montre le travail qui en découle.',
+    cta_body: 'Téléchargez le CV complet pour accéder au détail des projets, compétences et expériences.',
     cta_btn: 'Télécharger le CV (PDF)',
-    cta_note: 'Vous cherchez une version française ou adaptée à un poste spécifique ? N\'hésitez pas à me contacter.',
+    cta_note: 'Vous cherchez une version adaptée à un poste spécifique ? N\'hésitez pas à me contacter.',
   },
   en: {
     label: 'Resume',
     subtitle: 'Product Builder | Software Developer',
-    intro: 'Trained as a lawyer, practiced as an archivist, became a developer by necessity. Available for international remote opportunities.',
-    updated: 'Last updated: June 2026',
+    intro: 'Building digital products at the intersection of software, information systems and real-world operations. Available for international remote opportunities.',
     download: 'Download Resume (PDF)',
+    pdf_meta: 'PDF · 2 pages · Updated June 2026',
     summary_label: 'Professional Summary',
-    summary: 'Multidisciplinary background at the intersection of law, information management and software development. Over the past three years, designed and shipped four digital products — from a property management SaaS serving real estate agencies in francophone Africa to a digital publishing platform and an agribusiness venture. Work independently across the full product cycle — from conception to deployment — with a focus on documentation, process design and real value delivered to users.',
+    summary: 'Multidisciplinary background at the intersection of law, information management and software development. Over the past three years, designed and shipped four digital products — from a property management SaaS serving real estate agencies in francophone Africa to a digital publishing platform and an agribusiness venture. The projects below illustrate how I approach product building across different industries.',
     highlights_label: 'Career Highlights',
     highlights: [
       '4 products designed and shipped to production',
       'Founded ImmoGest — property SaaS for francophone Africa',
-      'Founded Kalamundi — African digital publishing platform',
-      'Founded AgroNova Farms — agribusiness venture',
+      'Building Kalamundi — African digital publishing platform',
+      'Building AgroNova Farms — agribusiness venture',
       'Multidisciplinary background: Law · Archival Science · Software',
       'Available immediately for international remote opportunities',
     ],
     exp_label: 'Selected Experience',
+    exp_intro: 'A selection of the roles that shaped my multidisciplinary background. The complete career history is available in the downloadable resume.',
     exp: [
       { org: 'Cabinet CRAA', role: 'Legal Counsel & Records Manager', period: '2018 →' },
       { org: 'CHANAS Assurances S.A.', role: 'Records Management · via Onyx Manpower', period: '2021–2022' },
       { org: 'Earlier Archival Assignments', role: 'MINESEC · Ministry of Public Contracts · NEZAFI Capital', period: '2018–2021' },
     ],
-    exp_note: 'The complete experience is available in the downloadable resume.',
     edu_label: 'Education',
     edu: [
       { degree: 'Master II — Public Law', school: 'University of Yaoundé II · 2016–2018' },
@@ -81,7 +81,8 @@ const t = {
     ],
     lang_label: 'Languages',
     lang: ['French — Native', 'English — Professional'],
-    cta_title: 'Interested in learning more?',
+    cta_title: 'Need the complete picture?',
+    cta_tagline: 'This resume summarizes the journey. The portfolio shows the work behind it.',
     cta_body: 'Download the complete resume for the full detail of my projects, skills and experience.',
     cta_btn: 'Download Resume (PDF)',
     cta_note: 'Looking for a French version or a role-specific resume? Feel free to get in touch.',
@@ -91,6 +92,11 @@ const t = {
 const DIVIDER = (
   <div style={{ height: '0.5px', background: 'var(--border)', margin: '2rem 0' }} />
 );
+
+const label_style = {
+  fontSize: '11px', fontWeight: 600, color: 'var(--text4)',
+  textTransform: 'uppercase' as const, letterSpacing: '0.1em', margin: '0 0 12px',
+} as const;
 
 export default async function CVPage({
   params,
@@ -116,10 +122,10 @@ export default async function CVPage({
         <p style={{ fontSize: '14px', color: 'var(--accent)', margin: '0 0 10px', fontWeight: 500 }}>
           {c.subtitle}
         </p>
-        <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 1.25rem', lineHeight: 1.6 }}>
+        <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 1.25rem', lineHeight: 1.6, textAlign: 'justify' }}>
           {c.intro}
         </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
           <a
             href="/cv-franklin-fofe-nodem.pdf"
             download
@@ -132,7 +138,7 @@ export default async function CVPage({
           >
             <Download size={14} /> {c.download}
           </a>
-          <p style={{ fontSize: '11px', color: 'var(--text4)', margin: 0 }}>{c.updated}</p>
+          <p style={{ fontSize: '11px', color: 'var(--text4)', margin: 0 }}>{c.pdf_meta}</p>
         </div>
       </div>
 
@@ -140,9 +146,7 @@ export default async function CVPage({
 
       {/* ── PROFESSIONAL SUMMARY ── */}
       <div style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>
-          {c.summary_label}
-        </h2>
+        <h2 style={label_style}>{c.summary_label}</h2>
         <p style={{ fontSize: '14px', color: 'var(--text2)', lineHeight: 1.8, margin: 0, textAlign: 'justify' }}>
           {c.summary}
         </p>
@@ -152,9 +156,7 @@ export default async function CVPage({
 
       {/* ── CAREER HIGHLIGHTS ── */}
       <div style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 12px' }}>
-          {c.highlights_label}
-        </h2>
+        <h2 style={label_style}>{c.highlights_label}</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
           {c.highlights.map((h, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
@@ -169,10 +171,11 @@ export default async function CVPage({
 
       {/* ── SELECTED EXPERIENCE ── */}
       <div style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 14px' }}>
-          {c.exp_label}
-        </h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '12px' }}>
+        <h2 style={label_style}>{c.exp_label}</h2>
+        <p style={{ fontSize: '12px', color: 'var(--text4)', margin: '0 0 16px', lineHeight: 1.6, fontStyle: 'italic' }}>
+          {c.exp_intro}
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {c.exp.map((e, i) => (
             <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px' }}>
               <div>
@@ -183,18 +186,13 @@ export default async function CVPage({
             </div>
           ))}
         </div>
-        <p style={{ fontSize: '12px', color: 'var(--text4)', margin: 0, fontStyle: 'italic' }}>
-          {c.exp_note}
-        </p>
       </div>
 
       {DIVIDER}
 
       {/* ── EDUCATION ── */}
       <div style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 12px' }}>
-          {c.edu_label}
-        </h2>
+        <h2 style={label_style}>{c.edu_label}</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {c.edu.map((e, i) => (
             <div key={i}>
@@ -209,9 +207,7 @@ export default async function CVPage({
 
       {/* ── LANGUAGES ── */}
       <div style={{ marginBottom: '2.5rem' }}>
-        <h2 style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text4)', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 10px' }}>
-          {c.lang_label}
-        </h2>
+        <h2 style={label_style}>{c.lang_label}</h2>
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
           {c.lang.map((lang, i) => (
             <span key={i} style={{ fontSize: '13px', color: 'var(--text2)' }}>{lang}</span>
@@ -228,6 +224,9 @@ export default async function CVPage({
         <h3 style={{ fontSize: '15px', fontWeight: 500, color: 'var(--text1)', margin: '0 0 6px' }}>
           {c.cta_title}
         </h3>
+        <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 6px', lineHeight: 1.6, fontStyle: 'italic' }}>
+          {c.cta_tagline}
+        </p>
         <p style={{ fontSize: '13px', color: 'var(--text3)', margin: '0 0 1.25rem', lineHeight: 1.6 }}>
           {c.cta_body}
         </p>
