@@ -161,8 +161,8 @@ const caseStudies: Record<string, CaseStudy> = {
       { src: '/agronova-pesee.webp', caption: { fr: 'Pesée à la vente — 6,2 kg de silures, 2500 FCFA/kg', en: 'Weighing at sale — 6.2 kg of catfish, 2500 FCFA/kg' } },
     ],
     summary: {
-      fr: 'AgroNova Farms n\'est pas une simple ferme piscicole. C\'est un projet entrepreneurial agricole dont la vision est de construire une exploitation moderne, durable et progressivement diversifiée. La pisciculture constitue la première activité opérationnelle — et sert de preuve de capacité d\'exécution. Ce projet démontre que ma capacité à construire et opérer des systèmes complexes va bien au-delà du code.',
-      en: 'AgroNova Farms is not simply a fish farm. It\'s an agribusiness entrepreneurial project with a vision to build a modern, sustainable and progressively diversified agricultural company. Catfish farming is the first operational activity — and serves as proof of execution capability. This project demonstrates that my ability to build and operate complex systems goes well beyond code.',
+      fr: 'AgroNova Farms a été conçu comme un projet agro-entrepreneurial à long terme. Plutôt que de monter immédiatement en production, le projet a démarré par une opération piscicole contrôlée pour mieux comprendre la demande, les circuits de distribution et les réalités opérationnelles. La production a progressé de 300 à 700 silures par cycle, fournissant des enseignements concrets qui guideront la diversification future vers d\'autres activités agricoles.',
+      en: 'AgroNova Farms was conceived as a long-term agribusiness venture. Rather than scaling production immediately, the project began with a controlled catfish operation to better understand customer demand, distribution channels and operational realities. Early production grew from 300 to 700 fish per cycle, providing practical insights that will guide future expansion into other agricultural activities.',
     },
     metrics: [
       { value: '700', label: { fr: 'Silures / cycle', en: 'Catfish / cycle' } },
