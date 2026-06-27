@@ -39,8 +39,8 @@ export default function Header() {
 
   const navLinks = [
     { href: `/${locale}/projects`, label: t('work') },
-    { href: `/${locale}/about`, label: t('about') },
     { href: `/${locale}/writing`, label: t('writing') },
+    { href: `/${locale}/about`, label: t('about') },
     { href: `/${locale}/cv`, label: t('resume') },
     { href: `/${locale}/contact`, label: t('contact') },
   ];
