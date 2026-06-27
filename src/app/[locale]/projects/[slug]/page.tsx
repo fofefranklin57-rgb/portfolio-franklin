@@ -114,45 +114,50 @@ const caseStudies: Record<string, CaseStudy> = {
   kalamundi: {
     name: 'Kalamundi',
     tagline: {
-      fr: 'Plateforme de publication connectant auteurs et lecteurs africains.',
-      en: 'Publishing platform connecting African authors and readers.',
+      fr: 'La Plume du Monde — plateforme de publication connectant auteurs et lecteurs du monde entier.',
+      en: 'La Plume du Monde — publishing platform connecting authors and readers worldwide.',
     },
     status: 'live',
     year: 2023,
-    stack: ['Flutter', 'Next.js', 'Cloudflare Workers', 'Supabase', 'AI generation'],
+    stack: ['Flutter', 'Next.js', 'Cloudflare Workers', 'Supabase', 'AI generation', 'Blockchain'],
     ctas: [
       { icon: '🌐', label: { fr: 'Visiter la plateforme', en: 'Visit Platform' }, href: 'https://kalamundi.pages.dev/', primary: true },
     ],
+    screenshots: [
+      { src: '/kalamundi-home.png', caption: { fr: 'Page d\'accueil — 288 œuvres, 50+ langues, horodatage blockchain', en: 'Home — 288 works, 50+ languages, blockchain timestamp' } },
+      { src: '/kalamundi-library.png', caption: { fr: 'Bibliothèque — catalogue complet par genre et langue', en: 'Library — full catalogue by genre and language' } },
+      { src: '/kalamundi-dashboard.png', caption: { fr: 'Dashboard auteur — gestion des œuvres publiées et statistiques de lecture', en: 'Author dashboard — published works management and reading stats' } },
+    ],
     summary: {
-      fr: 'Kalamundi est une plateforme complète de publication numérique pensée pour les auteurs africains. Elle intègre un studio de création de contenu, une bibliothèque de lecteurs et un système de génération d\'illustrations assisté par IA.',
-      en: 'Kalamundi is a complete digital publishing platform designed for African authors. It integrates a content creation studio, a reader library and an AI-assisted illustration generation system.',
+      fr: 'Kalamundi est une plateforme complète de publication numérique — "La Plume du Monde" — pensée pour les auteurs africains et mondiaux. Elle propose un studio de création, une bibliothèque de 288 œuvres en 50+ langues, et intègre un horodatage blockchain pour protéger les droits des auteurs.',
+      en: 'Kalamundi is a complete digital publishing platform — "La Plume du Monde" — designed for African and global authors. It offers a creation studio, a library of 288 works in 50+ languages, and integrates blockchain timestamping to protect authors\' rights.',
     },
     metrics: [
+      { value: '288', label: { fr: 'Œuvres publiées', en: 'Published works' } },
+      { value: '50+', label: { fr: 'Langues disponibles', en: 'Languages available' } },
       { value: '2', label: { fr: 'Interfaces (auteur + lecteur)', en: 'Interfaces (author + reader)' } },
-      { value: 'AI', label: { fr: 'Génération d\'illustrations', en: 'Illustration generation' } },
-      { value: 'Multi', label: { fr: 'Formats de contenu', en: 'Content formats' } },
-      { value: '2023', label: { fr: 'Première version', en: 'First version' } },
+      { value: 'Chain', label: { fr: 'Horodatage blockchain', en: 'Blockchain timestamp' } },
     ],
     sections: [
       {
         heading: { fr: 'Contexte', en: 'Context' },
         body: {
-          fr: 'Les auteurs africains manquent d\'outils de publication numérique adaptés à leurs besoins. Amazon KDP et les plateformes occidentales présentent des barrières linguistiques, des frictions de paiement et des contraintes culturelles qui pénalisent les créateurs francophones.\n\nKalamundi part d\'un constat simple : il existe une demande de contenu africain numérique, mais peu de ponts entre les auteurs locaux et leurs lecteurs potentiels.',
-          en: 'African authors lack digital publishing tools adapted to their needs. Amazon KDP and western platforms present language barriers, payment friction and cultural constraints that penalize francophone creators.\n\nKalamundi starts from a simple observation: there is demand for African digital content, but few bridges between local authors and their potential readers.',
+          fr: 'Les auteurs africains manquent d\'outils de publication numérique adaptés à leurs besoins. Amazon KDP et les plateformes occidentales présentent des barrières linguistiques, des frictions de paiement et des contraintes culturelles qui pénalisent les créateurs francophones.\n\nKalamundi part d\'un constat simple : il existe une demande de contenu africain numérique — romans, poésie, contes, littérature jeunesse — mais peu de ponts entre les auteurs locaux et leurs lecteurs potentiels. La plateforme s\'est ouverte à la littérature mondiale pour atteindre une masse critique de contenu dès le lancement.',
+          en: 'African authors lack digital publishing tools adapted to their needs. Amazon KDP and western platforms present language barriers, payment friction and cultural constraints that penalize francophone creators.\n\nKalamundi starts from a simple observation: there is demand for African digital content — novels, poetry, tales, children\'s literature — but few bridges between local authors and their potential readers. The platform opened to world literature to reach a critical mass of content from launch.',
         },
       },
       {
         heading: { fr: 'Ce qui a été construit', en: 'What was built' },
         body: {
-          fr: '**Studio auteur.** Interface de création de contenu avec éditeur intégré, gestion des chapitres, métadonnées et couvertures.\n\n**Génération d\'illustrations IA.** Les auteurs peuvent générer des illustrations pour leurs œuvres directement depuis la plateforme, sans compétences en design.\n\n**Bibliothèque lecteur.** Interface de lecture fluide avec gestion de bibliothèque personnelle, progression de lecture et découverte de nouveaux titres.\n\n**Application mobile Flutter.** L\'application mobile accompagne l\'expérience web pour la lecture en mobilité.',
-          en: '**Author studio.** Content creation interface with integrated editor, chapter management, metadata and covers.\n\n**AI illustration generation.** Authors can generate illustrations for their works directly from the platform, without design skills.\n\n**Reader library.** Smooth reading interface with personal library management, reading progress and new title discovery.\n\n**Flutter mobile app.** The mobile application accompanies the web experience for reading on the go.',
+          fr: '**Studio auteur.** Interface de création et de publication avec éditeur intégré, gestion des chapitres, métadonnées, couvertures et suivi des lectures par œuvre.\n\n**Bibliothèque lecteur.** Catalogue de 288 œuvres organisé par genre (Fiction, Non-fiction, Poésie & Oralité, Jeunesse, Littératures africaines, Domaine public), avec recherche par titre, auteur, pays ou mot-clé.\n\n**Horodatage blockchain.** Chaque œuvre publiée est horodatée sur la blockchain pour protéger les droits des auteurs sans démarche juridique complexe.\n\n**Application mobile Flutter.** L\'application mobile accompagne l\'expérience web pour la lecture et la publication en mobilité.',
+          en: '**Author studio.** Creation and publishing interface with integrated editor, chapter management, metadata, covers and per-work reading tracking.\n\n**Reader library.** Catalogue of 288 works organized by genre (Fiction, Non-fiction, Poetry & Oral, Youth, African Literature, Public Domain), with search by title, author, country or keyword.\n\n**Blockchain timestamp.** Every published work is timestamped on the blockchain to protect authors\' rights without complex legal procedures.\n\n**Flutter mobile app.** The mobile application accompanies the web experience for reading and publishing on the go.',
         },
       },
       {
         heading: { fr: 'Ce que j\'ai appris', en: 'What I learned' },
         body: {
-          fr: 'Kalamundi m\'a confronté à la complexité d\'un produit à double face (auteurs + lecteurs). Les besoins des deux publics sont parfois contradictoires : les auteurs veulent de la visibilité, les lecteurs veulent de la curation.\n\nL\'intégration de la génération IA a ouvert un angle inattendu : les auteurs utilisent cet outil non seulement pour illustrer, mais aussi pour explorer des directions créatives. C\'est un cas d\'usage que je n\'avais pas anticipé.',
-          en: 'Kalamundi confronted me with the complexity of a two-sided product (authors + readers). The needs of both audiences are sometimes contradictory: authors want visibility, readers want curation.\n\nThe integration of AI generation opened an unexpected angle: authors use this tool not only to illustrate, but also to explore creative directions. This is a use case I had not anticipated.',
+          fr: 'Kalamundi m\'a confronté à la complexité d\'un produit à double face (auteurs + lecteurs). Les besoins des deux publics sont parfois contradictoires : les auteurs veulent de la visibilité, les lecteurs veulent de la curation. Équilibrer les deux sans sacrifier l\'un pour l\'autre est un exercice permanent.\n\nL\'ajout du horodatage blockchain a révélé une demande forte : les auteurs africains ont un besoin réel de protection de leurs droits, mais les solutions existantes sont inaccessibles. Une fonctionnalité technique peut devenir un argument de confiance majeur.\n\nLe passage de "plateforme africaine" à "La Plume du Monde" a été une décision stratégique pour éviter le plafond d\'un marché de niche dès le départ.',
+          en: 'Kalamundi confronted me with the complexity of a two-sided product (authors + readers). The needs of both audiences are sometimes contradictory: authors want visibility, readers want curation. Balancing both without sacrificing one for the other is an ongoing exercise.\n\nAdding blockchain timestamping revealed strong demand: African authors have a real need to protect their rights, but existing solutions are inaccessible. A technical feature can become a major trust argument.\n\nThe shift from "African platform" to "La Plume du Monde" was a strategic decision to avoid the ceiling of a niche market from the start.',
         },
       },
     ],
@@ -217,36 +222,48 @@ const caseStudies: Record<string, CaseStudy> = {
   traficam: {
     name: 'Traficam',
     tagline: {
-      fr: 'Système de gestion logistique pour le Cameroun.',
-      en: 'Logistics management system for Cameroon.',
+      fr: 'Application de signalement et de suivi du trafic en temps réel pour Yaoundé.',
+      en: 'Real-time traffic reporting and tracking app for Yaoundé.',
     },
     status: 'dev',
     year: 2024,
-    stack: ['Next.js', 'TypeScript', 'Supabase'],
+    stack: ['Next.js', 'TypeScript', 'Supabase', 'Mapping API', 'GPS'],
     ctas: [
       { icon: '▶', label: { fr: 'Voir la démo', en: 'Live Demo' }, href: 'https://traficam-demo.fofefranklin57.workers.dev/', primary: true },
     ],
+    screenshots: [
+      { src: '/traficam-map.png', caption: { fr: 'Carte temps réel — incidents actifs à Yaoundé (accidents, bouchons, pannes)', en: 'Real-time map — active incidents in Yaoundé (accidents, traffic jams, breakdowns)' } },
+    ],
     summary: {
-      fr: 'Traficam est un système de gestion logistique et de transport conçu pour le contexte camerounais. Le projet est en cours de développement.',
-      en: 'Traficam is a logistics and transport management system designed for the Cameroonian context. The project is currently in development.',
+      fr: 'Traficam est une application mobile de signalement et de suivi du trafic en temps réel, conçue pour le contexte camerounais. Elle permet aux usagers de signaler et consulter les incidents de circulation — accidents, bouchons, véhicules en panne — directement sur une carte interactive de Yaoundé.',
+      en: 'Traficam is a mobile real-time traffic reporting and tracking app designed for the Cameroonian context. It allows users to report and view traffic incidents — accidents, congestion, vehicle breakdowns — directly on an interactive map of Yaoundé.',
     },
     metrics: [
-      { value: 'WIP', label: { fr: 'En cours', en: 'In progress' } },
+      { value: 'GPS', label: { fr: 'Géolocalisation temps réel', en: 'Real-time geolocation' } },
+      { value: '4', label: { fr: 'Types d\'incidents', en: 'Incident types' } },
+      { value: 'Mobile', label: { fr: 'Application native', en: 'Native app' } },
       { value: '2024', label: { fr: 'Démarré', en: 'Started' } },
     ],
     sections: [
       {
         heading: { fr: 'Contexte', en: 'Context' },
         body: {
-          fr: 'La logistique au Cameroun souffre des mêmes problèmes que l\'immobilier : absence d\'outils numériques adaptés, dépendance au papier et aux appels téléphoniques, absence de traçabilité.\n\nTraficam vise à apporter un système de suivi des marchandises, de coordination des transports et de documentation logistique adapté aux réalités locales.',
-          en: 'Logistics in Cameroon suffers from the same problems as real estate: lack of adapted digital tools, dependence on paper and phone calls, absence of traceability.\n\nTraficam aims to bring a cargo tracking, transport coordination and logistics documentation system adapted to local realities.',
+          fr: 'À Yaoundé, l\'information routière n\'existe pas de manière structurée. Les automobilistes découvrent les accidents et les embouteillages en les rencontrant. Les rares tentatives d\'information passent par des groupes WhatsApp désorganisés ou la radio, sans géolocalisation ni confirmation en temps réel.\n\nTraficam part de ce constat : le problème n\'est pas l\'absence d\'information, c\'est l\'absence d\'un outil pour la centraliser, la localiser et la partager efficacement.',
+          en: 'In Yaoundé, road information does not exist in a structured way. Drivers discover accidents and traffic jams by running into them. The few information attempts go through disorganized WhatsApp groups or radio, with no geolocation or real-time confirmation.\n\nTraficam starts from this observation: the problem is not the absence of information, it is the absence of a tool to centralize, locate and share it effectively.',
+        },
+      },
+      {
+        heading: { fr: 'Ce qui a été construit', en: 'What was built' },
+        body: {
+          fr: '**Carte interactive.** Vue temps réel des incidents actifs sur la carte de Yaoundé, avec géolocalisation GPS de l\'utilisateur et positionnement précis des signalements.\n\n**Signalement communautaire.** Les usagers signalent les incidents en quelques secondes — type d\'incident (accident, bouchon, véhicule en panne, travaux), localisation automatique, description optionnelle.\n\n**Confirmation collaborative.** Chaque incident peut être confirmé par d\'autres usagers, ce qui augmente la fiabilité de l\'information et filtre les faux signalements.\n\n**Alertes push.** Notifications en temps réel pour les incidents sur les itinéraires fréquemment empruntés.',
+          en: '**Interactive map.** Real-time view of active incidents on the Yaoundé map, with user GPS geolocation and precise incident positioning.\n\n**Community reporting.** Users report incidents in seconds — incident type (accident, congestion, breakdown, roadworks), automatic location, optional description.\n\n**Collaborative confirmation.** Each incident can be confirmed by other users, increasing information reliability and filtering false reports.\n\n**Push alerts.** Real-time notifications for incidents on frequently used routes.',
         },
       },
       {
         heading: { fr: 'Statut actuel', en: 'Current status' },
         body: {
-          fr: 'Le projet est en phase de développement. L\'architecture de base est définie et les premiers modules sont en cours de construction.\n\nLes études de cas complètes seront publiées à la mise en production.',
-          en: 'The project is in the development phase. The base architecture is defined and the first modules are being built.\n\nComplete case studies will be published at production launch.',
+          fr: 'Traficam est en phase de développement actif. La démo disponible présente le flux principal : carte en temps réel, signalement d\'incidents et confirmation communautaire sur Yaoundé Centre.\n\nLes prochaines étapes incluent l\'extension à d\'autres villes camerounaises, l\'intégration avec les services de police et la monétisation via des données de trafic agrégées pour les entreprises de transport et les institutions publiques.',
+          en: 'Traficam is in active development. The available demo showcases the main flow: real-time map, incident reporting and community confirmation over Yaoundé Centre.\n\nNext steps include expansion to other Cameroonian cities, integration with police services and monetization via aggregated traffic data for transport companies and public institutions.',
         },
       },
     ],
